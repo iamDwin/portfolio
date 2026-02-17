@@ -27,7 +27,7 @@ const { isVisible } = useScrollReveal(sectionRef)
         <div
           v-for="category in skillCategories"
           :key="category.title"
-          class="rounded-2xl border border-white/5 bg-card p-6 transition-all duration-300 hover:border-accent/20 hover:shadow-glow"
+          class="rounded-2xl border border-border/5 bg-card p-6 transition-all duration-300 hover:border-accent/20 hover:shadow-glow"
         >
           <!-- Category header -->
           <div class="mb-4 flex items-center gap-3">

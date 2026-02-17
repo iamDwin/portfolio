@@ -8,22 +8,26 @@ export default {
     './pages/**/*.vue',
     './composables/**/*.ts',
   ],
+  darkMode: 'class',
   theme: {
     extend: {
       colors: {
-        void: '#05050a',
-        primary: '#0a0a12',
-        surface: '#10101a',
-        card: '#161622',
-        elevated: '#1e1e2e',
+        void: 'rgb(var(--color-void) / <alpha-value>)',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        card: 'rgb(var(--color-card) / <alpha-value>)',
+        elevated: 'rgb(var(--color-elevated) / <alpha-value>)',
         accent: {
-          DEFAULT: '#2d9d4a',
-          dim: '#238c3d',
-          light: '#3dd68c',
+          DEFAULT: 'rgb(var(--color-accent) / <alpha-value>)',
+          dim: 'rgb(var(--color-accent-dim) / <alpha-value>)',
+          light: 'rgb(var(--color-accent-light) / <alpha-value>)',
         },
-        'text-primary': '#e8e6e0',
-        'text-secondary': '#9896a0',
-        'text-muted': '#5e5c68',
+        'text-primary': 'rgb(var(--color-text-primary) / <alpha-value>)',
+        'text-secondary': 'rgb(var(--color-text-secondary) / <alpha-value>)',
+        'text-muted': 'rgb(var(--color-text-muted) / <alpha-value>)',
+        overlay: 'rgb(var(--color-overlay) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
+        'on-accent': 'rgb(var(--color-on-accent) / <alpha-value>)',
       },
       fontFamily: {
         display: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
@@ -31,8 +35,8 @@ export default {
         mono: ['JetBrains Mono', 'SF Mono', 'Menlo', 'monospace'],
       },
       boxShadow: {
-        glow: '0 0 24px rgba(45, 157, 74, 0.15)',
-        'glow-strong': '0 0 40px rgba(45, 157, 74, 0.25)',
+        glow: '0 0 24px rgb(var(--color-accent) / 0.15)',
+        'glow-strong': '0 0 40px rgb(var(--color-accent) / 0.25)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',

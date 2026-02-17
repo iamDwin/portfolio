@@ -8,7 +8,7 @@ defineProps<{
 
 <template>
   <article
-    class="group overflow-hidden rounded-2xl border border-white/5 bg-card transition-all duration-300 hover:border-accent/20 hover:shadow-glow hover:-translate-y-1"
+    class="group overflow-hidden rounded-2xl border border-border/5 bg-card transition-all duration-300 hover:border-accent/20 hover:shadow-glow hover:-translate-y-1"
     tabindex="0"
     :aria-label="`Project: ${project.title}`"
   >
@@ -29,7 +29,7 @@ defineProps<{
           :href="project.liveUrl"
           target="_blank"
           rel="noopener noreferrer"
-          class="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-white transition-transform hover:scale-110"
+          class="flex h-10 w-10 items-center justify-center rounded-full bg-accent text-on-accent transition-transform hover:scale-110"
           aria-label="View live demo"
           @click.stop
         >

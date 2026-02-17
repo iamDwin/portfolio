@@ -32,7 +32,7 @@ const { isVisible } = useScrollReveal(sectionRef)
       <!-- Email CTA -->
       <a
         :href="`mailto:${profileData.email}`"
-        class="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
+        class="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-on-accent shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
         aria-label="Send me an email"
       >
         <Icon name="mdi:email-outline" />

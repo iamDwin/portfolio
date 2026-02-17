@@ -19,7 +19,7 @@ const handleContact = (): void => {
   >
     <!-- Background gradient -->
     <div
-      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(45,157,74,0.08)_0%,_transparent_70%)]"
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-accent-glow)_/_0.08)_0%,_transparent_70%)]"
     />
 
     <div class="relative z-10 mx-auto max-w-3xl text-center">
@@ -59,13 +59,13 @@ const handleContact = (): void => {
         style="animation-delay: 0.3s"
       >
         <button
-          class="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-white shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
+          class="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-on-accent shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
           @click="handleViewWork"
         >
           View My Work
         </button>
         <button
-          class="rounded-full border border-white/10 px-8 py-3 text-sm font-semibold text-text-primary transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
+          class="rounded-full border border-border/10 px-8 py-3 text-sm font-semibold text-text-primary transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
           @click="handleContact"
         >
           Get In Touch

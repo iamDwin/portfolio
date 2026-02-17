@@ -27,7 +27,7 @@ const { isVisible } = useScrollReveal(sectionRef)
         <!-- Photo -->
         <div class="flex justify-center lg:col-span-2">
           <div
-            class="relative h-64 w-64 overflow-hidden rounded-2xl border-2 border-white/5 bg-card sm:h-80 sm:w-80"
+            class="relative h-64 w-64 overflow-hidden rounded-2xl border-2 border-border/5 bg-card sm:h-80 sm:w-80"
           >
             <!-- Placeholder avatar -->
             <div

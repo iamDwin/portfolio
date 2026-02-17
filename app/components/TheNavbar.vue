@@ -40,7 +40,7 @@ onUnmounted(() => {
     class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
     :class="[
       isScrolled
-        ? 'bg-void/90 backdrop-blur-md border-b border-white/5 shadow-lg'
+        ? 'bg-void/90 backdrop-blur-md border-b border-border/5 shadow-lg'
         : 'bg-transparent',
     ]"
   >
@@ -64,26 +64,30 @@ onUnmounted(() => {
             :class="[
               activeSection === item.sectionId
                 ? 'text-accent bg-accent/10'
-                : 'text-text-secondary hover:text-text-primary hover:bg-white/5',
+                : 'text-text-secondary hover:text-text-primary hover:bg-overlay/5',
             ]"
             @click="handleNavClick(item.sectionId)"
           >
             {{ item.label }}
           </button>
+          <ThemeToggle />
         </div>
 
-        <!-- Mobile Hamburger -->
-        <button
-          class="flex items-center justify-center rounded-lg p-2 text-text-secondary transition-colors hover:bg-white/5 hover:text-text-primary md:hidden"
-          :aria-expanded="isMobileMenuOpen"
-          aria-label="Toggle navigation menu"
-          @click="handleToggleMenu"
-        >
-          <Icon
-            :name="isMobileMenuOpen ? 'mdi:close' : 'mdi:menu'"
-            class="text-2xl"
-          />
-        </button>
+        <!-- Mobile Controls -->
+        <div class="flex items-center gap-1 md:hidden">
+          <ThemeToggle />
+          <button
+            class="flex items-center justify-center rounded-lg p-2 text-text-secondary transition-colors hover:bg-overlay/5 hover:text-text-primary"
+            :aria-expanded="isMobileMenuOpen"
+            aria-label="Toggle navigation menu"
+            @click="handleToggleMenu"
+          >
+            <Icon
+              :name="isMobileMenuOpen ? 'mdi:close' : 'mdi:menu'"
+              class="text-2xl"
+            />
+          </button>
+        </div>
       </div>
     </div>
 
@@ -98,7 +102,7 @@ onUnmounted(() => {
     >
       <div
         v-if="isMobileMenuOpen"
-        class="border-b border-white/5 bg-void/95 backdrop-blur-md md:hidden"
+        class="border-b border-border/5 bg-void/95 backdrop-blur-md md:hidden"
       >
         <div class="space-y-1 px-4 py-4">
           <button
@@ -108,7 +112,7 @@ onUnmounted(() => {
             :class="[
               activeSection === item.sectionId
                 ? 'text-accent bg-accent/10'
-                : 'text-text-secondary hover:text-text-primary hover:bg-white/5',
+                : 'text-text-secondary hover:text-text-primary hover:bg-overlay/5',
             ]"
             @click="handleNavClick(item.sectionId)"
           >

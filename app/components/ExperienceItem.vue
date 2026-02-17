@@ -10,7 +10,7 @@ defineProps<{
   <div class="relative pl-8 pb-12 last:pb-0">
     <!-- Timeline line -->
     <div
-      class="absolute left-[7px] top-3 bottom-0 w-px bg-white/10"
+      class="absolute left-[7px] top-3 bottom-0 w-px bg-overlay/10"
       aria-hidden="true"
     />
 
@@ -20,7 +20,7 @@ defineProps<{
       :class="
         entry.current
           ? 'bg-accent border-accent shadow-glow'
-          : 'bg-card border-white/20'
+          : 'bg-card border-border/20'
       "
       aria-hidden="true"
     />
