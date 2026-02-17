@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply bg-void text-text-primary;
+  }
+
+  body {
+    @apply font-body antialiased;
+  }
+}

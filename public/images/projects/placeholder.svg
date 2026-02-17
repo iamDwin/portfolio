@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <rect width="600" height="400" fill="#161622"/>
+  <rect x="240" y="140" width="120" height="120" rx="12" fill="#1e1e2e" stroke="#2d9d4a" stroke-width="2"/>
+  <path d="M280 185 L300 215 L320 185" fill="none" stroke="#2d9d4a" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="300" y1="215" x2="300" y2="235" stroke="#2d9d4a" stroke-width="3" stroke-linecap="round"/>
+  <text x="300" y="300" text-anchor="middle" fill="#5e5c68" font-family="Inter, sans-serif" font-size="14">Project Screenshot</text>
+</svg>
