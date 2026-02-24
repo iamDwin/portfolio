@@ -1,14 +1,12 @@
 export const useTheme = () => {
   const colorMode = useColorMode()
 
-  const isDark = computed<boolean>(() => colorMode.value === 'dark')
+  const isDark = computed<boolean>(() => {
+    return colorMode.value === 'dark'
+  })
 
   const handleToggleTheme = (): void => {
-    if (import.meta.client) {
-      const html = document.documentElement
-      html.classList.add('theme-transitioning')
-      setTimeout(() => html.classList.remove('theme-transitioning'), 300)
-    }
+    // Let @nuxtjs/color-mode handle the class swap via its own watcher
     colorMode.preference = isDark.value ? 'light' : 'dark'
   }
 

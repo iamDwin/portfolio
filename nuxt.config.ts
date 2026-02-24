@@ -12,6 +12,8 @@ export default defineNuxtConfig({
 
   modules: ['@nuxtjs/tailwindcss', '@nuxt/icon', '@nuxtjs/color-mode'],
 
+  css: ['~/assets/css/theme.css'],
+
   colorMode: {
     classSuffix: '',
     preference: 'dark',
@@ -59,7 +61,5 @@ export default defineNuxtConfig({
     },
   },
 
-  tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
-  },
+  tailwindcss: {},
 })

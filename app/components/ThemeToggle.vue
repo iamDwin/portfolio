@@ -1,29 +1,34 @@
 <script setup lang="ts">
-const { handleToggleTheme, themeIcon, themeLabel } = useTheme()
+const colorMode = useColorMode()
+
+const isDark = computed<boolean>(() => colorMode.value === 'dark')
+
+const themeIcon = computed<string>(() =>
+  isDark.value ? 'mdi:weather-sunny' : 'mdi:weather-night',
+)
+
+const themeLabel = computed<string>(() =>
+  isDark.value ? 'Switch to light mode' : 'Switch to dark mode',
+)
+
+const handleToggleTheme = (): void => {
+  colorMode.preference = isDark.value ? 'light' : 'dark'
+}
 </script>
 
 <template>
-  <button
-    type="button"
-    class="flex items-center justify-center rounded-lg p-2 text-text-secondary transition-all duration-300 hover:bg-overlay/5 hover:text-accent"
-    :aria-label="themeLabel"
-    :title="themeLabel"
-    @click="handleToggleTheme"
-  >
-    <Transition
-      enter-active-class="transition duration-200 ease-out"
-      enter-from-class="opacity-0 rotate-90 scale-75"
-      enter-to-class="opacity-100 rotate-0 scale-100"
-      leave-active-class="transition duration-150 ease-in"
-      leave-from-class="opacity-100 rotate-0 scale-100"
-      leave-to-class="opacity-0 -rotate-90 scale-75"
-      mode="out-in"
+  <ClientOnly>
+    <button
+      type="button"
+      class="flex items-center justify-center rounded-lg p-2 text-text-secondary transition-all duration-300 hover:bg-overlay/5 hover:text-accent"
+      :aria-label="themeLabel"
+      :title="themeLabel"
+      @click="handleToggleTheme"
     >
-      <Icon
-        :key="themeIcon"
-        :name="themeIcon"
-        class="text-xl"
-      />
-    </Transition>
-  </button>
+      <Icon :name="themeIcon" class="text-xl" />
+    </button>
+    <template #fallback>
+      <div class="h-9 w-9" />
+    </template>
+  </ClientOnly>
 </template>

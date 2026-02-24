@@ -1,0 +1,72 @@
+/* ===== DARK THEME (default) ===== */
+:root,
+html.dark {
+  color-scheme: dark;
+
+  --color-void: 5 5 10;
+  --color-primary: 10 10 18;
+  --color-surface: 16 16 26;
+  --color-card: 22 22 34;
+  --color-elevated: 30 30 46;
+
+  --color-accent: 45 157 74;
+  --color-accent-dim: 35 140 61;
+  --color-accent-light: 61 214 140;
+
+  --color-text-primary: 232 230 224;
+  --color-text-secondary: 152 150 160;
+  --color-text-muted: 94 92 104;
+
+  --color-overlay: 255 255 255;
+  --color-border: 255 255 255;
+  --color-on-accent: 255 255 255;
+
+  --color-accent-glow: 45 157 74;
+}
+
+/* ===== LIGHT THEME ===== */
+html.light {
+  color-scheme: light;
+
+  --color-void: 250 250 252;
+  --color-primary: 244 244 248;
+  --color-surface: 238 238 244;
+  --color-card: 255 255 255;
+  --color-elevated: 244 244 248;
+
+  --color-accent: 33 135 58;
+  --color-accent-dim: 28 120 50;
+  --color-accent-light: 40 180 90;
+
+  --color-text-primary: 24 24 32;
+  --color-text-secondary: 88 88 104;
+  --color-text-muted: 140 140 156;
+
+  --color-overlay: 0 0 0;
+  --color-border: 0 0 0;
+  --color-on-accent: 255 255 255;
+
+  --color-accent-glow: 33 135 58;
+}
+
+/* ===== BASE STYLES ===== */
+html {
+  scroll-behavior: smooth;
+  background-color: rgb(var(--color-void));
+  color: rgb(var(--color-text-primary));
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Smooth theme transition */
+html.theme-transitioning,
+html.theme-transitioning *,
+html.theme-transitioning *::before,
+html.theme-transitioning *::after {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
