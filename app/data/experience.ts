@@ -9,42 +9,68 @@ export interface ExperienceEntry {
 
 export const experience: ExperienceEntry[] = [
   {
-    company: 'Tech Company',
-    role: 'Senior Frontend Engineer',
-    period: 'Jan 2023 — Present',
+    company: 'Heatmap.com',
+    role: 'Software Developer',
+    period: 'Sep 2022 — Present',
     description:
-      'Leading frontend architecture and development for customer-facing applications. Driving adoption of modern frameworks and best practices across engineering teams.',
+      'Building data analytics tools and leading feature development in a cross-functional team of 30+ developers and QAs.',
     highlights: [
-      'Architected a shared design system used by 5 product teams',
-      'Reduced initial page load time by 45% through code splitting and lazy loading',
-      'Mentored 3 junior developers and led weekly knowledge-sharing sessions',
-      'Implemented comprehensive accessibility compliance across all products',
+      'Collaborated with 30 developers and QAs to build a data analytics platform using Nuxt.js and PHP',
+      'Led a sub-team of 3 to develop a Google Chrome extension using React',
+      'Directed a team of 3 in creating the surveys feature for heatmap.com',
+      'Partnered with 5 developers to implement an AI naming feature, optimizing element and section naming on client sites',
+      'Designed and executed business logic automations using Node.js and Python, improving operational efficiency',
     ],
     current: true,
   },
   {
-    company: 'Digital Agency',
-    role: 'Frontend Developer',
-    period: 'Mar 2021 — Dec 2022',
+    company: 'TOLDOIT',
+    role: 'Senior Software Engineer',
+    period: 'Jul 2022 — Sep 2022',
     description:
-      'Built responsive, high-performance web applications for diverse clients across fintech, healthcare, and e-commerce sectors.',
+      'Led engineering teams in the design, development, and deployment of web and mobile applications.',
     highlights: [
-      'Delivered 12+ client projects on time with high satisfaction scores',
-      'Built reusable component libraries that reduced development time by 30%',
-      'Integrated third-party APIs and payment gateways for e-commerce platforms',
+      'Led a team of software engineers in designing, developing, and deploying web applications',
+      'Spearheaded mobile application development and deployment to the Google Play Store using the Ionic framework',
     ],
     current: false,
   },
   {
-    company: 'Startup Inc',
-    role: 'Junior Frontend Developer',
-    period: 'Jun 2019 — Feb 2021',
+    company: 'TOLDOIT',
+    role: 'Software Engineer',
+    period: 'Feb 2021 — Jul 2022',
     description:
-      'Developed and maintained user interfaces for SaaS products. Collaborated closely with designers and backend engineers.',
+      'Developed frontend interfaces and integrated backend services for web and mobile applications across multiple product lines.',
     highlights: [
-      'Migrated legacy jQuery codebase to modern Vue.js architecture',
-      'Improved test coverage from 20% to 85% with unit and integration tests',
-      'Contributed to open-source projects and internal tooling',
+      'Built frontend-backend communication using microservices and RESTful APIs',
+      'Integrated third-party APIs including Paystack for payment processing',
+      'Developed user-friendly interfaces with Angular and Ionic for web and mobile apps',
+      'Managed DEV and PROD deployments on Ubuntu servers hosted on Azure Cloud',
+      'Created visual designs, icons, and logos with Adobe Photoshop',
+      'Collaborated with product managers to define MVPs and deliver effective solutions',
+    ],
+    current: false,
+  },
+  {
+    company: 'Ghana Community Network Service Limited (GCNet)',
+    role: 'Satellite Tracking & Logistics',
+    period: 'Sep 2019 — Aug 2020',
+    description:
+      'Managed transit department operations and satellite tracking systems for nationwide logistics.',
+    highlights: [
+      'Maintained records for 300+ tracking devices monitoring heavy-duty trucks transporting goods from Tema harbor to borders nationwide',
+    ],
+    current: false,
+  },
+  {
+    company: 'Quat IT Solutions',
+    role: 'Web Developer',
+    period: 'Sep 2018 — Aug 2020',
+    description:
+      'Collaborated with a team of five to develop management systems for healthcare and education sectors.',
+    highlights: [
+      'Developed efficient hospital management systems',
+      'Contributed to building school management systems',
     ],
     current: false,
   },

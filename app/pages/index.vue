@@ -1,14 +1,14 @@
 <script setup lang="ts">
 useHead({
-  title: 'Godwin Goodman Effah | Senior Frontend Engineer',
+  title: 'Godwin Goodman Effah | Software Engineer',
 })
 
 useSeoMeta({
   description:
-    'Portfolio of Godwin Goodman Effah — Senior Frontend Engineer specializing in Vue.js, Angular, TypeScript, and modern web applications.',
-  ogTitle: 'Godwin Goodman Effah | Senior Frontend Engineer',
+    'Portfolio of Godwin Goodman Effah — Software Engineer specializing in Angular, Vue.js, React, TypeScript, and mobile development with Ionic.',
+  ogTitle: 'Godwin Goodman Effah | Software Engineer',
   ogDescription:
-    'Senior Frontend Engineer building modern, performant, and accessible web experiences.',
+    'Software Engineer building modern web & mobile applications with Angular, Vue.js, React, and TypeScript.',
 })
 </script>
 

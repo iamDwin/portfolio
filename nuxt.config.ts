@@ -24,23 +24,23 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'en' },
-      title: 'Godwin Goodman Effah | Senior Frontend Engineer',
+      title: 'Godwin Goodman Effah | Software Engineer',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         {
           name: 'description',
           content:
-            'Portfolio of Godwin Goodman Effah — Senior Frontend Engineer specializing in Vue.js, Angular, TypeScript, and modern web applications.',
+            'Portfolio of Godwin Goodman Effah — Software Engineer specializing in Angular, Vue.js, React, TypeScript, and mobile development with Ionic.',
         },
         {
           property: 'og:title',
-          content: 'Godwin Goodman Effah | Senior Frontend Engineer',
+          content: 'Godwin Goodman Effah | Software Engineer',
         },
         {
           property: 'og:description',
           content:
-            'Senior Frontend Engineer specializing in Vue.js, Angular, TypeScript, and modern web applications.',
+            'Software Engineer building modern web & mobile applications with Angular, Vue.js, React, and TypeScript.',
         },
         { property: 'og:type', content: 'website' },
         { name: 'twitter:card', content: 'summary_large_image' },

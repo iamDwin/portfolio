@@ -12,38 +12,37 @@ export interface ProfileData {
   tagline: string
   bio: string[]
   email: string
+  phone: string
+  location: string
   socialLinks: SocialLink[]
 }
 
 export const profileData: ProfileData = {
   name: 'Godwin Goodman Effah',
   firstName: 'Godwin',
-  title: 'Senior Frontend Engineer',
-  tagline: 'I build modern, performant, and accessible web experiences.',
+  title: 'Software Engineer',
+  tagline:
+    'I build modern web & mobile applications with Angular, Vue.js, React, and TypeScript.',
   bio: [
-    'I\'m a Senior Frontend Engineer with a passion for building elegant, high-performance web applications. I specialize in Vue.js, Angular, and TypeScript — crafting interfaces that are both beautiful and accessible.',
-    'With years of experience shipping production applications, I focus on clean architecture, great developer experience, and pixel-perfect implementations. I love turning complex problems into simple, intuitive solutions.',
-    'When I\'m not coding, you\'ll find me exploring new technologies, contributing to open source, or mentoring other developers.',
+    'I\'m a Software Engineer based in Accra, Ghana with experience spanning frontend development, mobile applications, and backend services. I specialize in Angular, Vue.js, React, and TypeScript — building interfaces that are performant, scalable, and user-friendly.',
+    'Currently at Heatmap.com, I collaborate with a team of 30+ developers building data analytics tools with Nuxt.js, lead sub-teams on Chrome extensions and survey features, and implement AI-powered solutions that optimize client experiences.',
+    'I enjoy solving complex problems, leading engineering teams, and turning product ideas into production-ready applications — from web platforms and mobile apps to Chrome extensions and business automation tools.',
   ],
-  email: 'hello@godwineffah.dev',
+  email: 'godwinabeaku@gmail.com',
+  phone: '+233 54 152 4233',
+  location: 'Greater Accra, Ghana',
   socialLinks: [
     {
       platform: 'GitHub',
-      url: 'https://github.com/goodmaneffah',
+      url: 'https://github.com/iamDwin',
       icon: 'mdi:github',
       ariaLabel: 'Visit GitHub profile',
     },
     {
       platform: 'LinkedIn',
-      url: 'https://linkedin.com/in/godwineffah',
+      url: 'https://linkedin.com/in/godwin-goodman-effah-a8a140162',
       icon: 'mdi:linkedin',
       ariaLabel: 'Visit LinkedIn profile',
-    },
-    {
-      platform: 'Twitter',
-      url: 'https://twitter.com/goodmaneffah',
-      icon: 'mdi:twitter',
-      ariaLabel: 'Visit Twitter profile',
     },
   ],
 }

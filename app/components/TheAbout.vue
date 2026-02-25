@@ -47,6 +47,12 @@ const { isVisible } = useScrollReveal(sectionRef)
 
         <!-- Bio text -->
         <div class="lg:col-span-3">
+          <!-- Location badge -->
+          <div class="mb-4 flex items-center gap-2 text-sm text-text-muted">
+            <Icon name="mdi:map-marker-outline" class="text-accent" />
+            <span>{{ profileData.location }}</span>
+          </div>
+
           <p
             v-for="(paragraph, index) in profileData.bio"
             :key="index"
@@ -54,6 +60,12 @@ const { isVisible } = useScrollReveal(sectionRef)
           >
             {{ paragraph }}
           </p>
+
+          <!-- Education -->
+          <div class="mt-6 flex items-center gap-2 text-sm text-text-muted">
+            <Icon name="mdi:school-outline" class="text-accent" />
+            <span>B.Sc. Information Technology — Pentecost University, Accra</span>
+          </div>
 
           <!-- Email CTA -->
           <a

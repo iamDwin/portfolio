@@ -10,40 +10,54 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'Heatmap Analytics Platform',
+    description:
+      'A comprehensive data analytics tool that visualizes user behavior on websites. Built with a team of 30+ developers, featuring real-time heatmaps, session recordings, and actionable insights.',
+    image: '/images/projects/placeholder.svg',
+    tags: ['Nuxt.js', 'PHP', 'Node.js', 'Python', 'Analytics'],
+    liveUrl: 'https://heatmap.com',
+    featured: true,
+  },
+  {
+    title: 'Heatmap Chrome Extension',
+    description:
+      'A Google Chrome extension for heatmap.com that enables users to interact with analytics data directly in their browser. Led a sub-team of 3 developers from inception to launch.',
+    image: '/images/projects/placeholder.svg',
+    tags: ['React', 'Chrome Extension API', 'TypeScript'],
+    featured: true,
+  },
+  {
+    title: 'Heatmap Surveys Feature',
+    description:
+      'An in-app survey builder and delivery system for heatmap.com, enabling clients to collect user feedback directly on their websites. Directed a team of 3 developers.',
+    image: '/images/projects/placeholder.svg',
+    tags: ['Nuxt.js', 'TypeScript', 'REST API', 'PHP'],
+    liveUrl: 'https://heatmap.com',
+    featured: true,
+  },
+  {
     title: 'Uri Coding Agent',
     description:
       'An AI-powered autonomous coding assistant with real-time WebSocket communication, app preview, multi-modal prompts, and session persistence.',
     image: '/images/projects/placeholder.svg',
     tags: ['TypeScript', 'Angular', 'Node.js', 'WebSocket', 'Claude SDK'],
-    githubUrl: 'https://github.com/goodmaneffah/uri-agent',
+    githubUrl: 'https://github.com/iamDwin',
     featured: true,
   },
   {
-    title: 'E-Commerce Platform',
+    title: 'TOLDOIT Web & Mobile Apps',
     description:
-      'A full-stack e-commerce solution with product catalog, shopping cart, checkout flow, and real-time inventory management.',
+      'Full-stack web and mobile applications built with Angular and Ionic, featuring Paystack payment integration, RESTful APIs, and deployed on Azure Cloud.',
     image: '/images/projects/placeholder.svg',
-    tags: ['Vue.js', 'Nuxt', 'Supabase', 'TailwindCSS', 'Stripe'],
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/goodmaneffah',
+    tags: ['Angular', 'Ionic', 'REST API', 'Azure', 'Paystack'],
     featured: true,
   },
   {
-    title: 'Analytics Dashboard',
+    title: 'Hospital & School Management Systems',
     description:
-      'Interactive data visualization dashboard with real-time charts, filters, and exportable reports for business intelligence.',
+      'Management systems for healthcare and education sectors, built collaboratively at Quat IT Solutions to streamline operations and record-keeping.',
     image: '/images/projects/placeholder.svg',
-    tags: ['Angular', 'TypeScript', 'D3.js', 'RxJS', 'REST API'],
-    liveUrl: 'https://example.com',
-    featured: true,
-  },
-  {
-    title: 'Design System',
-    description:
-      'A comprehensive component library and design system used across multiple product teams, with full documentation and accessibility compliance.',
-    image: '/images/projects/placeholder.svg',
-    tags: ['Vue.js', 'Storybook', 'TypeScript', 'SCSS', 'a11y'],
-    githubUrl: 'https://github.com/goodmaneffah',
-    featured: true,
+    tags: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
+    featured: false,
   },
 ]

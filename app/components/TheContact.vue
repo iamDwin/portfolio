@@ -25,22 +25,38 @@ const { isVisible } = useScrollReveal(sectionRef)
       <!-- Message -->
       <p class="mb-10 text-base leading-relaxed text-text-secondary sm:text-lg">
         I'm always open to new opportunities, interesting projects, and
-        conversations about frontend engineering. Whether you have a question or
-        just want to say hello — my inbox is always open.
+        conversations about software engineering. Whether you have a question or
+        just want to say hello — feel free to reach out.
       </p>
 
-      <!-- Email CTA -->
-      <a
-        :href="`mailto:${profileData.email}`"
-        class="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-on-accent shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
-        aria-label="Send me an email"
-      >
-        <Icon name="mdi:email-outline" />
-        Say Hello
-      </a>
+      <!-- Contact details -->
+      <div class="mb-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+        <a
+          :href="`mailto:${profileData.email}`"
+          class="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-on-accent shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
+          aria-label="Send me an email"
+        >
+          <Icon name="mdi:email-outline" />
+          {{ profileData.email }}
+        </a>
+        <a
+          :href="`tel:${profileData.phone.replace(/\\s/g, '')}`"
+          class="inline-flex items-center gap-2 rounded-full border border-border/10 px-8 py-3.5 text-sm font-semibold text-text-primary transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
+          aria-label="Call me"
+        >
+          <Icon name="mdi:phone-outline" />
+          {{ profileData.phone }}
+        </a>
+      </div>
+
+      <!-- Location -->
+      <p class="mb-6 flex items-center justify-center gap-2 text-sm text-text-muted">
+        <Icon name="mdi:map-marker-outline" class="text-accent" />
+        {{ profileData.location }}
+      </p>
 
       <!-- Social links -->
-      <div class="mt-10 flex justify-center">
+      <div class="flex justify-center">
         <SocialLinks size="lg" />
       </div>
     </div>
