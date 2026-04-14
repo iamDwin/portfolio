@@ -52,7 +52,7 @@ onUnmounted(() => {
           aria-label="Scroll to top"
           @click="handleNavClick('hero')"
         >
-          {{ profileData.firstName }}<span class="text-accent">.</span>
+          Goodman<span class="text-accent">.</span>
         </button>
 
         <!-- Desktop Nav -->
