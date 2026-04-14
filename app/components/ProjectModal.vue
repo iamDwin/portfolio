@@ -31,7 +31,7 @@ watch(
     <Transition name="backdrop">
       <div
         v-if="open && project"
-        class="fixed inset-0 z-50 flex items-end sm:items-center justify-center sm:p-6"
+        class="fixed inset-0 z-[60] flex items-end sm:items-center justify-center sm:p-6"
         role="dialog"
         aria-modal="true"
         :aria-label="project.title"
