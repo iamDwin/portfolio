@@ -72,9 +72,9 @@ export const projects: Project[] = [
     title: 'Preach',
     description:
       'A ministry companion app for pastors, evangelists, and church leaders — built to help teams capture people quickly, follow up consistently, and stay aligned across branches so no soul is forgotten. Features a Quick Capture flow for bulk contact intake, soul tracking with status management, group and outreach organisation, visitation records, multi-branch admin, and a full subscription system with monthly/yearly church plans. Built as a native iOS and Android app with a responsive web landing page. Currently in Google Play Console testing.',
-    image: '/images/projects/placeholder.svg',
+    image: 'https://image.thum.io/get/width/800/crop/450/https://preachmobile.com',
     tags: ['Angular', 'Ionic', 'Capacitor', 'Supabase', 'TypeScript', 'Paystack'],
-    liveUrl: 'https://preach.app',
+    liveUrl: 'https://preachmobile.com',
     featured: true,
     category: 'personal',
   },
