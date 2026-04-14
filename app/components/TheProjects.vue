@@ -7,12 +7,13 @@ const { isVisible } = useScrollReveal(sectionRef)
 
 const selectedProject = ref<Project | null>(null)
 
-type Tab = 'all' | 'work' | 'personal'
+type Tab = 'all' | 'work' | 'personal' | 'freelance'
 const activeTab = ref<Tab>('all')
 
 const tabs: { label: string; value: Tab }[] = [
   { label: 'All', value: 'all' },
   { label: 'Work', value: 'work' },
+  { label: 'Freelance', value: 'freelance' },
   { label: 'Personal', value: 'personal' },
 ]
 

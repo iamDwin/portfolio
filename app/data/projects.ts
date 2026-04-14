@@ -6,7 +6,7 @@ export interface Project {
   liveUrl?: string
   githubUrl?: string
   featured: boolean
-  category: 'work' | 'personal'
+  category: 'work' | 'personal' | 'freelance'
 }
 
 export const projects: Project[] = [
