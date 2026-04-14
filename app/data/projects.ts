@@ -13,7 +13,7 @@ export const projects: Project[] = [
     title: 'Heatmap Analytics Platform',
     description:
       'A comprehensive data analytics tool that visualizes user behavior on websites. Built with a team of 30+ developers, featuring real-time heatmaps, session recordings, and actionable insights.',
-    image: '/images/projects/placeholder.svg',
+    image: 'https://image.thum.io/get/width/800/crop/450/https://heatmap.com',
     tags: ['Nuxt.js', 'PHP', 'Node.js', 'Python', 'Analytics'],
     liveUrl: 'https://heatmap.com',
     featured: true,
