@@ -19,11 +19,11 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'CNN Suite v2 — E-Commerce Semantic Intelligence',
+    title: 'CnN Suite v2 — Classification And Naming',
     description:
-      'Heading the development of an intelligent DOM classification engine that semantically understands e-commerce pages at scale. The system analyses homepages, product pages, and collection pages across thousands of Shopify and custom stores — classifying every element (hero sections, product grids, pricing, CTAs, reviews) using a multi-stage CNN pipeline with 45+ modules, site fingerprinting, and a Claude-powered two-pass analyser for training data generation.',
+      'Heading the development of an intelligent DOM classification and naming engine that semantically understands e-commerce pages at scale. The system analyses homepages, product pages, and collection pages across thousands of Shopify and custom stores — classifying and naming every element (hero sections, product grids, pricing, CTAs, reviews) using a multi-stage pipeline with 45+ modules, site fingerprinting, and a Claude-powered two-pass analyser for training data generation.',
     image: '/images/projects/placeholder.svg',
-    tags: ['TypeScript', 'CNN', 'Claude AI', 'Shopify', 'Node.js', 'Webpack'],
+    tags: ['TypeScript', 'Classification', 'Claude AI', 'Shopify', 'Node.js', 'Webpack'],
     liveUrl: 'https://heatmap.com',
     featured: true,
   },
