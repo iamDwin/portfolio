@@ -24,6 +24,11 @@ const emit = defineEmits<{ open: [project: Project] }>()
         class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
         loading="lazy"
       />
+      <!-- Category badge -->
+      <span class="absolute top-3 right-3 rounded-full bg-accent/15 border border-accent/25 px-2.5 py-0.5 text-[10px] font-semibold uppercase tracking-wide text-accent backdrop-blur-sm">
+        {{ project.category === 'work' ? 'Work' : 'Personal' }}
+      </span>
+
       <!-- Overlay on hover -->
       <div
         class="absolute inset-0 flex items-center justify-center gap-4 bg-void/70 opacity-0 transition-opacity duration-300 group-hover:opacity-100"
