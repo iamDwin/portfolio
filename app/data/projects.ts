@@ -45,6 +45,14 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'CnN Correction Tool',
+    description:
+      'Built and manage an internal Chrome extension that enables QA teams to verify and correct CnN classification labels directly on heatmap recording pages. Features element navigation across 100+ classifications with variable replacement, Jira ticket creation, Monaco-powered JSON editing, and intelligent multi-user conflict resolution synced to AWS S3 — all from a Manifest V3 side panel.',
+    image: '/images/projects/placeholder.svg',
+    tags: ['TypeScript', 'Chrome Extension', 'Manifest V3', 'AWS S3', 'Jira API', 'Webpack'],
+    featured: true,
+  },
+  {
     title: 'Uri Coding Agent',
     description:
       'An AI-powered autonomous coding assistant with real-time WebSocket communication, app preview, multi-modal prompts, and session persistence.',
