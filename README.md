@@ -1,75 +1,35 @@
-# Nuxt Minimal Starter
+# Goodman's Portfolio
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Personal portfolio website for Godwin Goodman Effah — Software Engineer. Built with Nuxt 3, TailwindCSS, and deployed on Netlify.
 
-## Setup
+## Tech Stack
 
-Make sure to install dependencies:
+- **[Nuxt 3](https://nuxt.com)** — Vue 3 framework with SSR/SSG
+- **[TailwindCSS](https://tailwindcss.com)** — Utility-first CSS with custom design tokens
+- **[@nuxtjs/color-mode](https://color-mode.nuxtjs.org)** — Dark/light theme switching
+- **[@nuxt/icon](https://github.com/nuxt/icon)** — Iconify MDI icon set
+
+## Getting Started
 
 ```bash
-# npm
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
+npm run dev       # http://localhost:3000
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+## Scripts
 
 ```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm run dev       # Development server
+npm run build     # SSR production build
+npm run generate  # Static site generation
+npm run preview   # Preview production build locally
 ```
 
-## Production
+## Deployment
 
-Build the application for production:
+This site is deployed on **Netlify** via static generation. Configuration is in [`netlify.toml`](./netlify.toml).
 
-```bash
-# npm
-npm run build
+- Build command: `npm run generate`
+- Publish directory: `.output/public`
 
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+Any push to `main` triggers an automatic deploy.
