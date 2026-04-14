@@ -1,9 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { projects } from '~/data/projects'
+import { projects, type Project } from '~/data/projects'
 
 const sectionRef = ref<HTMLElement | null>(null)
 const { isVisible } = useScrollReveal(sectionRef)
+
+const selectedProject = ref<Project | null>(null)
 </script>
 
 <template>
@@ -28,8 +30,16 @@ const { isVisible } = useScrollReveal(sectionRef)
           v-for="project in projects"
           :key="project.title"
           :project="project"
+          @open="selectedProject = $event"
         />
       </div>
     </div>
   </section>
+
+  <!-- Project detail modal -->
+  <ProjectModal
+    :project="selectedProject"
+    :open="!!selectedProject"
+    @close="selectedProject = null"
+  />
 </template>

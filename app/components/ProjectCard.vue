@@ -4,13 +4,17 @@ import type { Project } from '~/data/projects'
 defineProps<{
   project: Project
 }>()
+
+const emit = defineEmits<{ open: [project: Project] }>()
 </script>
 
 <template>
   <article
-    class="group overflow-hidden rounded-2xl border border-border/5 bg-card transition-all duration-300 hover:border-accent/20 hover:shadow-glow hover:-translate-y-1"
+    class="group overflow-hidden rounded-2xl border border-border/5 bg-card transition-all duration-300 hover:border-accent/20 hover:shadow-glow hover:-translate-y-1 cursor-pointer"
     tabindex="0"
-    :aria-label="`Project: ${project.title}`"
+    :aria-label="`Project: ${project.title}. Press Enter to view details.`"
+    @click="emit('open', project)"
+    @keydown.enter="emit('open', project)"
   >
     <!-- Image -->
     <div class="relative aspect-video overflow-hidden bg-primary">
