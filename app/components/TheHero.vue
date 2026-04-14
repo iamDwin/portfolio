@@ -17,6 +17,9 @@ const handleContact = (): void => {
     id="hero"
     class="relative flex min-h-screen items-center justify-center px-4"
   >
+    <!-- Grid pattern -->
+    <div class="grid-pattern pointer-events-none absolute inset-0" />
+
     <!-- Background gradient -->
     <div
       class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-accent-glow)_/_0.08)_0%,_transparent_70%)]"
@@ -93,3 +96,14 @@ const handleContact = (): void => {
     </div>
   </section>
 </template>
+
+<style scoped>
+.grid-pattern {
+  background-image:
+    linear-gradient(rgb(var(--color-overlay) / 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(var(--color-overlay) / 0.04) 1px, transparent 1px);
+  background-size: 40px 40px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
+}
+</style>
