@@ -18,6 +18,7 @@ export const skillCategories: SkillCategory[] = [
       'Angular Material',
       'Bootstrap',
       'TailwindCSS',
+      'Chrome Extensions (Manifest V3)',
     ],
   },
   {
@@ -26,6 +27,7 @@ export const skillCategories: SkillCategory[] = [
     skills: [
       'Ionic Framework',
       'Capacitor',
+      'Supabase',
       'Progressive Web Apps',
       'Responsive Design',
     ],
@@ -35,11 +37,28 @@ export const skillCategories: SkillCategory[] = [
     icon: 'mdi:server-outline',
     skills: [
       'Node.js',
+      'NestJS',
       'PHP',
       'Python',
       'REST APIs',
+      'WebSockets',
       'Microservices',
+      'RabbitMQ',
+      'Redis',
+      'ClickHouse',
+      'Supabase',
       'Database Management',
+    ],
+  },
+  {
+    title: 'AI & Automation',
+    icon: 'mdi:robot-outline',
+    skills: [
+      'Claude AI / Anthropic SDK',
+      'PydanticAI',
+      'MCP (Model Context Protocol)',
+      'Slack Bolt',
+      'Prompt Engineering',
     ],
   },
   {
@@ -47,7 +66,10 @@ export const skillCategories: SkillCategory[] = [
     icon: 'mdi:wrench-outline',
     skills: [
       'Git',
+      'Docker',
+      'AWS S3',
       'Azure Cloud',
+      'Paystack',
       'Ubuntu Server',
       'Adobe Photoshop',
       'Scrum / Agile',
