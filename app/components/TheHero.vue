@@ -22,7 +22,7 @@ const handleContact = (): void => {
 
     <!-- Background gradient -->
     <div
-      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-accent-glow)_/_0.08)_0%,_transparent_70%)]"
+      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-accent-glow)_/_0.18)_0%,_transparent_65%)]"
     />
 
     <div class="relative z-10 mx-auto max-w-3xl text-center">
