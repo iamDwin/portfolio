@@ -32,7 +32,7 @@ export const projects: Project[] = [
       'An in-app survey builder and delivery system for heatmap.com, enabling clients to collect user feedback directly on their websites. Directed a team of 3 developers.',
     image: 'https://cdn.prod.website-files.com/667c60bb6788d92e03b16204/68095c869455efc798c2bae7_43j322680312d190d43a76d3a65d28_Screenshot%202025-04-18%20at%2011.04.39%E2%80%AFPM%201.avif',
     tags: ['Nuxt.js', 'TypeScript', 'REST API', 'PHP'],
-    liveUrl: 'https://heatmap.com',
+    liveUrl: 'https://www.heatmap.com/surveys',
     featured: true,
   },
   {
