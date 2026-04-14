@@ -6,6 +6,7 @@ export interface Project {
   liveUrl?: string
   githubUrl?: string
   featured: boolean
+  category: 'work' | 'personal'
 }
 
 export const projects: Project[] = [
@@ -17,6 +18,7 @@ export const projects: Project[] = [
     tags: ['Nuxt.js', 'PHP', 'Node.js', 'Python', 'Analytics'],
     liveUrl: 'https://heatmap.com',
     featured: true,
+    category: 'work',
   },
   {
     title: 'CnN Suite v2 — Classification And Naming',
@@ -26,6 +28,7 @@ export const projects: Project[] = [
     tags: ['TypeScript', 'Classification', 'Claude AI', 'Shopify', 'Node.js', 'Webpack'],
     liveUrl: 'https://heatmap.com',
     featured: true,
+    category: 'work',
   },
   {
     title: 'Heatmap Radar',
@@ -34,6 +37,7 @@ export const projects: Project[] = [
     image: '/images/freepik__a-horizontal-logo-combining-a-logomark-and-the-wor__76116.png',
     tags: ['Python', 'Claude AI', 'Slack Bolt', 'ClickHouse', 'MCP', 'PydanticAI', 'Docker'],
     featured: true,
+    category: 'work',
   },
   {
     title: 'Heatmap Surveys Feature',
@@ -43,6 +47,7 @@ export const projects: Project[] = [
     tags: ['Nuxt.js', 'TypeScript', 'REST API', 'PHP'],
     liveUrl: 'https://www.heatmap.com/surveys',
     featured: true,
+    category: 'work',
   },
   {
     title: 'CnN Correction Tool',
@@ -51,6 +56,7 @@ export const projects: Project[] = [
     image: '/images/projects/placeholder.svg',
     tags: ['TypeScript', 'Chrome Extension', 'Manifest V3', 'AWS S3', 'Jira API', 'Webpack'],
     featured: true,
+    category: 'work',
   },
   {
     title: 'Heatmap AI Grader — Site Audit Service',
@@ -60,6 +66,17 @@ export const projects: Project[] = [
     tags: ['TypeScript', 'Node.js', 'RabbitMQ', 'AWS S3', 'Cheerio', 'Redis', 'NestJS'],
     liveUrl: 'https://heatmap.com',
     featured: true,
+    category: 'work',
+  },
+  {
+    title: 'Preach',
+    description:
+      'A ministry companion app for pastors, evangelists, and church leaders — built to help teams capture people quickly, follow up consistently, and stay aligned across branches so no soul is forgotten. Features a Quick Capture flow for bulk contact intake, soul tracking with status management, group and outreach organisation, visitation records, multi-branch admin, and a full subscription system with monthly/yearly church plans. Built as a native iOS and Android app with a responsive web landing page. Currently in Google Play Console testing.',
+    image: '/images/projects/placeholder.svg',
+    tags: ['Angular', 'Ionic', 'Capacitor', 'Supabase', 'TypeScript', 'Paystack'],
+    liveUrl: 'https://preach.app',
+    featured: true,
+    category: 'personal',
   },
   {
     title: 'Uri Coding Agent',
@@ -69,6 +86,7 @@ export const projects: Project[] = [
     tags: ['TypeScript', 'Angular', 'Node.js', 'WebSocket', 'Claude SDK'],
     githubUrl: 'https://github.com/iamDwin',
     featured: true,
+    category: 'personal',
   },
   {
     title: 'TOLDOIT Web & Mobile Apps',
@@ -77,6 +95,7 @@ export const projects: Project[] = [
     image: '/images/projects/placeholder.svg',
     tags: ['Angular', 'Ionic', 'REST API', 'Azure', 'Paystack'],
     featured: true,
+    category: 'work',
   },
   {
     title: 'Hospital & School Management Systems',
@@ -85,5 +104,6 @@ export const projects: Project[] = [
     image: '/images/projects/placeholder.svg',
     tags: ['PHP', 'JavaScript', 'MySQL', 'Bootstrap'],
     featured: false,
+    category: 'work',
   },
 ]
