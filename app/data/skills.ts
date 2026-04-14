@@ -52,13 +52,13 @@ export const skillCategories: SkillCategory[] = [
   },
   {
     title: 'AI & Automation',
-    icon: 'mdi:robot-outline',
+    icon: 'mdi:brain',
     skills: [
       'Claude AI / Anthropic SDK',
+      'Prompt Engineering',
       'PydanticAI',
       'MCP (Model Context Protocol)',
       'Slack Bolt',
-      'Prompt Engineering',
     ],
   },
   {
