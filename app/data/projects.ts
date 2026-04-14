@@ -19,6 +19,15 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'CNN Suite v2 — Product Grid Detection',
+    description:
+      'Leading development of a CNN-based product grid detection system for e-commerce websites. A TypeScript monorepo with a modular pipeline that automatically identifies product tiles, extracts attributes (images, prices, titles, CTAs), and delivers structured data for analytics — with deep Shopify support and shadow DOM traversal.',
+    image: '/images/projects/placeholder.svg',
+    tags: ['TypeScript', 'CNN', 'Machine Learning', 'Shopify', 'Webpack', 'Node.js'],
+    liveUrl: 'https://heatmap.com',
+    featured: true,
+  },
+  {
     title: 'Heatmap Chrome Extension',
     description:
       'A Google Chrome extension for heatmap.com that enables users to interact with analytics data directly in their browser. Led a sub-team of 3 developers from inception to launch.',
