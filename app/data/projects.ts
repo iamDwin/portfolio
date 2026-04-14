@@ -28,11 +28,11 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'Heatmap Chrome Extension',
+    title: 'Heatmap Radar',
     description:
-      'A Google Chrome extension for heatmap.com that enables users to interact with analytics data directly in their browser. Led a sub-team of 3 developers from inception to launch.',
+      'Built an AI-powered internal Slack bot that democratises access to customer data across the Heatmap team. Team members ask natural-language questions and get instant, contextual answers drawn from ClickHouse, Intercom, and Jira via a router-worker pipeline (Claude Haiku routes, Claude Sonnet executes). Features 10 pre-built analytical skills — churn analysis, trial health checks, at-risk fleet scans, revenue reconciliation, refund decisions, A/B test reports — plus automated HubSpot-triggered onboarding health checks, per-site memory, and a full admin command suite, all from Slack.',
     image: '/images/projects/placeholder.svg',
-    tags: ['React', 'Chrome Extension API', 'TypeScript'],
+    tags: ['Python', 'Claude AI', 'Slack Bolt', 'ClickHouse', 'MCP', 'PydanticAI', 'Docker'],
     featured: true,
   },
   {
