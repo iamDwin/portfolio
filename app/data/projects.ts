@@ -19,11 +19,11 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    title: 'CNN Suite v2 — Product Grid Detection',
+    title: 'CNN Suite v2 — E-Commerce Semantic Intelligence',
     description:
-      'Leading development of a CNN-based product grid detection system for e-commerce websites. A TypeScript monorepo with a modular pipeline that automatically identifies product tiles, extracts attributes (images, prices, titles, CTAs), and delivers structured data for analytics — with deep Shopify support and shadow DOM traversal.',
+      'Heading the development of an intelligent DOM classification engine that semantically understands e-commerce pages at scale. The system analyses homepages, product pages, and collection pages across thousands of Shopify and custom stores — classifying every element (hero sections, product grids, pricing, CTAs, reviews) using a multi-stage CNN pipeline with 45+ modules, site fingerprinting, and a Claude-powered two-pass analyser for training data generation.',
     image: '/images/projects/placeholder.svg',
-    tags: ['TypeScript', 'CNN', 'Machine Learning', 'Shopify', 'Webpack', 'Node.js'],
+    tags: ['TypeScript', 'CNN', 'Claude AI', 'Shopify', 'Node.js', 'Webpack'],
     liveUrl: 'https://heatmap.com',
     featured: true,
   },
