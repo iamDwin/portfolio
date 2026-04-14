@@ -53,6 +53,15 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: 'Heatmap AI Grader — Site Audit Service',
+    description:
+      'Built and enhanced the site audit service for an AI-powered website grading platform. The service performs static analysis across HTML, CSS, and JavaScript — scoring sites on five weighted dimensions: accessibility, best practices, SEO, security, and performance. Introduced a centralised configuration system that replaced hard-coded limits, increasing issue detection from 4 to 40+ per report (a 10× improvement), with prioritised recommendations and before/after code examples. Integrated into a RabbitMQ microservices pipeline with async processing, AWS S3 report storage, and a 30-day Redis cache.',
+    image: '/images/projects/placeholder.svg',
+    tags: ['TypeScript', 'Node.js', 'RabbitMQ', 'AWS S3', 'Cheerio', 'Redis', 'NestJS'],
+    liveUrl: 'https://heatmap.com',
+    featured: true,
+  },
+  {
     title: 'Uri Coding Agent',
     description:
       'An AI-powered autonomous coding assistant with real-time WebSocket communication, app preview, multi-modal prompts, and session persistence.',
