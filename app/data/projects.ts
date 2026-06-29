@@ -11,6 +11,16 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: 'SpendQueue',
+    description:
+      'A native iOS wishlist and spending-planning app for capturing items, organising them by priority, syncing through Supabase, and deciding what fits the budget right now. Built with SwiftUI, SwiftData, StoreKit 2, a share extension, and a home screen widget.',
+    image: '/images/projects/spendqueue.jpg',
+    tags: ['SwiftUI', 'SwiftData', 'Supabase', 'StoreKit 2', 'Widgets', 'iOS'],
+    liveUrl: 'https://spendqueue.netlify.app/',
+    featured: true,
+    category: 'personal',
+  },
+  {
     title: 'Heatmap Analytics Platform',
     description:
       'A comprehensive data analytics tool that visualizes user behavior on websites. Built with a team of 30+ developers, featuring real-time heatmaps, session recordings, and actionable insights.',

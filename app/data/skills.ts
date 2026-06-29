@@ -25,6 +25,8 @@ export const skillCategories: SkillCategory[] = [
     title: 'Mobile',
     icon: 'mdi:cellphone',
     skills: [
+      'SwiftUI',
+      'React Native',
       'Ionic Framework',
       'Capacitor',
       'Supabase',
