@@ -1,83 +1,86 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { profileData } from '~/data/profile'
 
-const sectionRef = ref<HTMLElement | null>(null)
-const { isVisible } = useScrollReveal(sectionRef)
+const principles = [
+  {
+    title: 'Make complexity legible',
+    text: 'The best engineering work gives people confidence. I reduce complicated systems into interfaces and workflows that feel direct, intentional, and easy to trust.',
+  },
+  {
+    title: 'Lead through the work',
+    text: 'I stay close to implementation while aligning teams around the product outcome, from architecture and delivery through QA and iteration.',
+  },
+  {
+    title: 'Build for the operating reality',
+    text: 'Production constraints are part of the design. Performance, maintainability, data quality, and graceful failure shape every decision from the start.',
+  },
+]
+
+const activePrinciple = ref(0)
+const principle = computed(() => principles[activePrinciple.value])
+
+const changePrinciple = (direction: number) => {
+  activePrinciple.value = (activePrinciple.value + direction + principles.length) % principles.length
+}
 </script>
 
 <template>
-  <section
-    id="about"
-    ref="sectionRef"
-    class="px-4 py-20 lg:py-32 transition-all duration-700"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-  >
-    <div class="mx-auto max-w-6xl">
-      <!-- Section heading -->
-      <div class="mb-16 text-center">
-        <h2 class="font-display text-3xl font-bold text-text-primary sm:text-4xl">
-          About Me
-        </h2>
-        <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
-      </div>
-
-      <!-- Content grid -->
-      <div class="grid items-center gap-12 lg:grid-cols-5">
-        <!-- Photo -->
-        <div class="flex justify-center lg:col-span-2">
-          <div
-            class="relative h-64 w-64 overflow-hidden rounded-2xl border-2 border-border/5 bg-card sm:h-80 sm:w-80"
-          >
-            <!-- Placeholder avatar -->
-            <div
-              class="flex h-full w-full items-center justify-center bg-gradient-to-br from-accent/20 to-accent/5"
-            >
-              <Icon
-                name="mdi:account-outline"
-                class="text-8xl text-accent/40"
-              />
-            </div>
-            <!-- Decorative border glow -->
-            <div
-              class="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-accent/10"
-            />
+  <section id="about" class="relative px-4 py-32 sm:px-6 md:py-48">
+    <div class="mx-auto max-w-7xl">
+      <div class="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
+        <div>
+          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-accent">Engineering, end to end</p>
+          <p class="mt-6 max-w-sm text-base leading-relaxed text-text-secondary">{{ profileData.bio[1] }}</p>
+          <div class="mt-8 flex items-center gap-3 text-sm text-text-muted">
+            <Icon name="mdi:map-marker-outline" class="text-lg text-accent" />
+            {{ profileData.location }}
           </div>
         </div>
 
-        <!-- Bio text -->
-        <div class="lg:col-span-3">
-          <!-- Location badge -->
-          <div class="mb-4 flex items-center gap-2 text-sm text-text-muted">
-            <Icon name="mdi:map-marker-outline" class="text-accent" />
-            <span>{{ profileData.location }}</span>
+        <div>
+          <h2 class="font-display text-[clamp(2.75rem,5.2vw,5.7rem)] font-semibold leading-[1.02] tracking-[-0.055em] text-text-primary">
+            I connect product thinking
+            <span class="mx-2 inline-block h-[.72em] w-[1.45em] overflow-hidden rounded-full align-baseline">
+              <img src="https://picsum.photos/seed/green-interface/360/180" alt="" class="h-full w-full object-cover grayscale contrast-125">
+            </span>
+            with hands-on engineering.
+          </h2>
+          <p class="mt-10 max-w-2xl text-lg leading-relaxed text-text-secondary">{{ profileData.bio[0] }}</p>
+        </div>
+      </div>
+
+      <div class="mt-24 overflow-hidden rounded-[2rem] border border-border/10 bg-surface md:mt-36">
+        <div class="grid md:grid-cols-[.82fr_1.18fr]">
+          <div class="relative min-h-72 overflow-hidden md:min-h-[28rem]">
+            <img src="https://picsum.photos/seed/code-structure/1000/1100" alt="Abstract structural detail" class="h-full w-full object-cover grayscale contrast-125 transition-transform duration-700 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-void/70 to-transparent" />
           </div>
-
-          <p
-            v-for="(paragraph, index) in profileData.bio"
-            :key="index"
-            class="mb-4 text-base leading-relaxed text-text-secondary last:mb-0 sm:text-lg"
-          >
-            {{ paragraph }}
-          </p>
-
-          <!-- Education -->
-          <div class="mt-6 flex items-center gap-2 text-sm text-text-muted">
-            <Icon name="mdi:school-outline" class="text-accent" />
-            <span>B.Sc. Information Technology — Pentecost University, Accra</span>
+          <div class="flex min-h-[28rem] flex-col justify-between p-7 sm:p-10 lg:p-14">
+            <Transition name="principle" mode="out-in">
+              <div :key="activePrinciple">
+                <p class="text-sm font-semibold text-accent">How I work</p>
+                <h3 class="mt-6 max-w-xl font-display text-3xl font-semibold tracking-[-0.04em] text-text-primary sm:text-4xl">{{ principle.title }}</h3>
+                <p class="mt-6 max-w-xl text-base leading-relaxed text-text-secondary sm:text-lg">{{ principle.text }}</p>
+              </div>
+            </Transition>
+            <div class="mt-12 flex items-center justify-between">
+              <span class="text-xs font-semibold tracking-[0.2em] text-text-muted">0{{ activePrinciple + 1 }} / 0{{ principles.length }}</span>
+              <div class="flex gap-2">
+                <button class="flex h-11 w-11 items-center justify-center rounded-full border border-border/15 text-text-primary transition-colors hover:border-accent hover:text-accent" aria-label="Previous principle" @click="changePrinciple(-1)"><Icon name="mdi:arrow-left" /></button>
+                <button class="flex h-11 w-11 items-center justify-center rounded-full bg-accent text-void transition-transform hover:translate-x-1" aria-label="Next principle" @click="changePrinciple(1)"><Icon name="mdi:arrow-right" /></button>
+              </div>
+            </div>
           </div>
-
-          <!-- Email CTA -->
-          <a
-            :href="`mailto:${profileData.email}`"
-            class="mt-6 inline-flex items-center gap-2 rounded-full border border-accent/30 px-6 py-2.5 text-sm font-medium text-accent transition-all duration-300 hover:bg-accent/10 hover:border-accent/50"
-            aria-label="Send email"
-          >
-            <Icon name="mdi:email-outline" />
-            Say Hello
-          </a>
         </div>
       </div>
     </div>
   </section>
 </template>
+
+<style scoped>
+.principle-enter-active,
+.principle-leave-active { transition: opacity .25s ease, transform .25s ease; }
+.principle-enter-from { opacity: 0; transform: translateY(12px); }
+.principle-leave-to { opacity: 0; transform: translateY(-12px); }
+</style>

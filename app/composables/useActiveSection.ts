@@ -3,29 +3,40 @@ import { ref, onMounted, onUnmounted, type Ref } from 'vue'
 export const useActiveSection = (
   sectionIds: string[],
 ): { activeSection: Ref<string> } => {
-  const activeSection = ref<string>(sectionIds[0] ?? '')
-  let observer: IntersectionObserver | null = null
+  const activeSection = ref(sectionIds[0] ?? '')
+  let animationFrame: number | null = null
 
-  onMounted(() => {
-    observer = new IntersectionObserver(
-      (entries) => {
-        for (const entry of entries) {
-          if (entry.isIntersecting) {
-            activeSection.value = entry.target.id
-          }
-        }
-      },
-      { rootMargin: '-20% 0px -80% 0px' },
-    )
+  const updateActiveSection = () => {
+    animationFrame = null
+    const activationLine = window.innerHeight * 0.35
+    let current = sectionIds[0] ?? ''
 
     for (const id of sectionIds) {
-      const el = document.getElementById(id)
-      if (el) observer.observe(el)
+      const section = document.getElementById(id)
+      if (section && section.getBoundingClientRect().top <= activationLine) {
+        current = id
+      }
     }
+
+    activeSection.value = current
+  }
+
+  const handleScroll = () => {
+    if (animationFrame === null) {
+      animationFrame = window.requestAnimationFrame(updateActiveSection)
+    }
+  }
+
+  onMounted(() => {
+    updateActiveSection()
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    window.addEventListener('resize', handleScroll, { passive: true })
   })
 
   onUnmounted(() => {
-    observer?.disconnect()
+    window.removeEventListener('scroll', handleScroll)
+    window.removeEventListener('resize', handleScroll)
+    if (animationFrame !== null) window.cancelAnimationFrame(animationFrame)
   })
 
   return { activeSection }

@@ -30,13 +30,13 @@ export default {
         'on-accent': 'rgb(var(--color-on-accent) / <alpha-value>)',
       },
       fontFamily: {
-        display: ['Poppins', 'system-ui', '-apple-system', 'sans-serif'],
-        body: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        display: ['Satoshi', 'Manrope', 'system-ui', '-apple-system', 'sans-serif'],
+        body: ['Satoshi', 'Manrope', 'system-ui', '-apple-system', 'sans-serif'],
         mono: ['JetBrains Mono', 'SF Mono', 'Menlo', 'monospace'],
       },
       boxShadow: {
-        glow: '0 0 24px rgb(var(--color-accent) / 0.15)',
-        'glow-strong': '0 0 40px rgb(var(--color-accent) / 0.25)',
+        glow: '0 24px 80px rgb(var(--color-accent) / 0.10)',
+        'glow-strong': '0 32px 110px rgb(var(--color-accent) / 0.16)',
       },
       animation: {
         'fade-in': 'fadeIn 0.6s ease-out forwards',

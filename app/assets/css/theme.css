@@ -3,25 +3,25 @@
 html.dark {
   color-scheme: dark;
 
-  --color-void: 5 5 10;
-  --color-primary: 10 10 18;
-  --color-surface: 16 16 26;
-  --color-card: 22 22 34;
-  --color-elevated: 30 30 46;
+  --color-void: 10 12 11;
+  --color-primary: 14 17 15;
+  --color-surface: 19 23 20;
+  --color-card: 24 29 25;
+  --color-elevated: 31 37 32;
 
-  --color-accent: 45 157 74;
-  --color-accent-dim: 35 140 61;
-  --color-accent-light: 61 214 140;
+  --color-accent: 184 245 79;
+  --color-accent-dim: 153 214 54;
+  --color-accent-light: 210 255 135;
 
-  --color-text-primary: 232 230 224;
-  --color-text-secondary: 152 150 160;
-  --color-text-muted: 94 92 104;
+  --color-text-primary: 242 244 238;
+  --color-text-secondary: 177 184 174;
+  --color-text-muted: 112 122 112;
 
   --color-overlay: 255 255 255;
   --color-border: 255 255 255;
   --color-on-accent: 255 255 255;
 
-  --color-accent-glow: 45 157 74;
+  --color-accent-glow: 184 245 79;
 }
 
 /* ===== LIGHT THEME ===== */
@@ -34,9 +34,9 @@ html.light {
   --color-card: 255 255 255;
   --color-elevated: 244 244 248;
 
-  --color-accent: 33 135 58;
-  --color-accent-dim: 28 120 50;
-  --color-accent-light: 40 180 90;
+  --color-accent: 68 105 20;
+  --color-accent-dim: 51 84 10;
+  --color-accent-light: 90 136 28;
 
   --color-text-primary: 24 24 32;
   --color-text-secondary: 88 88 104;
@@ -57,9 +57,28 @@ html {
 }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  font-family: 'Satoshi', 'Manrope', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  background: rgb(var(--color-void));
+}
+
+::selection {
+  color: rgb(var(--color-void));
+  background: rgb(var(--color-accent));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }
 
 /* Smooth theme transition */

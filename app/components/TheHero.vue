@@ -1,109 +1,65 @@
 <script setup lang="ts">
-import { profileData } from '~/data/profile'
+import { ref } from 'vue'
 
 const { scrollTo } = useSmoothScroll()
+const heroRef = ref<HTMLElement | null>(null)
+const visualRef = ref<HTMLElement | null>(null)
 
-const handleViewWork = (): void => {
-  scrollTo('projects')
-}
-
-const handleContact = (): void => {
-  scrollTo('contact')
-}
+onMounted(async () => {
+  if (!heroRef.value || !visualRef.value || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+  const { gsap } = await import('gsap')
+  gsap.from(heroRef.value.querySelectorAll('[data-hero-line]'), {
+    y: 56,
+    opacity: 0,
+    duration: 1.05,
+    stagger: 0.12,
+    ease: 'power3.out',
+  })
+  gsap.from(visualRef.value, { scale: 0.88, opacity: 0, duration: 1.35, delay: 0.2, ease: 'power3.out' })
+})
 </script>
 
 <template>
-  <section
-    id="hero"
-    class="relative flex min-h-screen items-center justify-center px-4"
-  >
-    <!-- Grid pattern -->
-    <div class="grid-pattern pointer-events-none absolute inset-0" />
-
-    <!-- Background gradient -->
-    <div
-      class="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgb(var(--color-accent-glow)_/_0.18)_0%,_transparent_65%)]"
-    />
-
-    <div class="relative z-10 mx-auto max-w-3xl text-center">
-      <!-- Greeting -->
-      <p
-        class="mb-4 font-mono text-sm tracking-wider text-accent animate-fade-in"
-      >
-        Hi, my name is
-      </p>
-
-      <!-- Name -->
-      <h1
-        class="font-display text-4xl font-bold text-text-primary sm:text-5xl md:text-6xl lg:text-7xl animate-slide-up"
-      >
-        {{ profileData.name }}
-      </h1>
-
-      <!-- Title -->
-      <p
-        class="mt-4 font-display text-xl font-semibold text-text-secondary sm:text-2xl md:text-3xl animate-slide-up"
-        style="animation-delay: 0.1s"
-      >
-        {{ profileData.title }}
-      </p>
-
-      <!-- Tagline -->
-      <p
-        class="mx-auto mt-6 max-w-xl text-base text-text-muted sm:text-lg animate-slide-up"
-        style="animation-delay: 0.2s"
-      >
-        {{ profileData.tagline }}
-      </p>
-
-      <!-- CTA Buttons -->
-      <div
-        class="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-slide-up"
-        style="animation-delay: 0.3s"
-      >
-        <button
-          class="rounded-full bg-accent px-8 py-3 text-sm font-semibold text-on-accent shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
-          @click="handleViewWork"
-        >
-          View My Work
-        </button>
-        <button
-          class="rounded-full border border-border/10 px-8 py-3 text-sm font-semibold text-text-primary transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
-          @click="handleContact"
-        >
-          Get In Touch
-        </button>
+  <section id="hero" ref="heroRef" class="relative min-h-[100svh] overflow-hidden px-4 pb-16 pt-32 sm:px-6 lg:pt-36">
+    <div class="pointer-events-none absolute -left-56 top-0 h-[38rem] w-[38rem] rounded-full bg-accent/10 blur-[140px]" />
+    <div class="mx-auto grid min-h-[calc(100svh-12rem)] max-w-7xl items-center gap-14 min-[960px]:grid-cols-[1.25fr_.75fr] min-[960px]:gap-12">
+      <div class="relative z-10">
+        <p data-hero-line class="mb-7 flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.22em] text-text-secondary">
+          <span class="h-px w-10 bg-accent" />
+          Software engineer in Accra
+        </p>
+        <h1 data-hero-line class="max-w-6xl font-display text-[clamp(3.15rem,5.2vw,6.9rem)] font-semibold leading-[0.91] tracking-[-0.065em] text-text-primary">
+          Engineering digital products that hold up.
+        </h1>
+        <p data-hero-line class="mt-8 max-w-xl text-base leading-relaxed text-text-secondary sm:text-lg">
+          I’m Godwin Goodman Effah. I turn complex product, data, and AI systems into clear web and mobile experiences built for real users and real scale.
+        </p>
+        <div data-hero-line class="mt-10 flex flex-col gap-3 sm:flex-row">
+          <button class="rounded-full bg-accent px-7 py-3.5 text-sm font-bold text-void transition-all duration-300 hover:-translate-y-1 hover:bg-accent-light" @click="scrollTo('projects')">
+            Explore selected work
+          </button>
+          <button class="rounded-full border border-border/20 px-7 py-3.5 text-sm font-bold text-text-primary transition-all duration-300 hover:-translate-y-1 hover:border-text-primary/50" @click="scrollTo('contact')">
+            Start a conversation
+          </button>
+        </div>
       </div>
 
-      <!-- Social Links -->
-      <div
-        class="mt-10 flex justify-center animate-slide-up"
-        style="animation-delay: 0.4s"
-      >
-        <SocialLinks size="md" />
+      <div ref="visualRef" class="relative mx-auto w-full max-w-xl lg:max-w-none">
+        <div class="group relative aspect-[4/5] overflow-hidden rounded-[2rem] bg-surface">
+          <img
+            src="https://picsum.photos/seed/architectural-system/1200/1500"
+            alt="Architectural forms representing carefully engineered systems"
+            class="h-full w-full object-cover grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-void via-void/10 to-transparent" />
+          <div class="absolute inset-x-0 bottom-0 flex items-end justify-between gap-6 p-7 sm:p-9">
+            <p class="max-w-[15rem] text-sm leading-relaxed text-text-primary">Product engineering across web, mobile, analytics, and applied AI.</p>
+            <a href="https://github.com/iamDwin" target="_blank" rel="noopener noreferrer" aria-label="Visit GitHub profile" class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-text-primary text-xl text-void transition-transform duration-300 hover:rotate-12">
+              <Icon name="mdi:arrow-top-right" />
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce-slow">
-      <button
-        aria-label="Scroll to about section"
-        class="text-text-muted transition-colors hover:text-accent"
-        @click="scrollTo('about')"
-      >
-        <Icon name="mdi:chevron-down" class="text-3xl" />
-      </button>
     </div>
   </section>
 </template>
-
-<style scoped>
-.grid-pattern {
-  background-image:
-    linear-gradient(rgb(var(--color-overlay) / 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgb(var(--color-overlay) / 0.04) 1px, transparent 1px);
-  background-size: 40px 40px;
-  -webkit-mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-  mask-image: radial-gradient(ellipse at center, black 30%, transparent 80%);
-}
-</style>

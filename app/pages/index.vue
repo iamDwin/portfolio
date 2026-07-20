@@ -14,7 +14,7 @@ useHead({
         alternateName: 'Goodman Effah',
         url: siteUrl,
         jobTitle: 'Software Engineer',
-        email: 'godwinabeaku@gmail.com',
+        email: 'goodmaneffah@gmail.com',
         telephone: '+233541524233',
         address: {
           '@type': 'PostalAddress',
@@ -59,7 +59,7 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
+  <div class="w-full max-w-full overflow-x-hidden">
     <TheHero />
     <TheAbout />
     <TheSkills />

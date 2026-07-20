@@ -1,63 +1,25 @@
 <script setup lang="ts">
-import { ref } from 'vue'
 import { profileData } from '~/data/profile'
-
-const sectionRef = ref<HTMLElement | null>(null)
-const { isVisible } = useScrollReveal(sectionRef)
 </script>
 
 <template>
-  <section
-    id="contact"
-    ref="sectionRef"
-    class="px-4 py-20 lg:py-32 transition-all duration-700"
-    :class="isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'"
-  >
-    <div class="mx-auto max-w-2xl text-center">
-      <!-- Section heading -->
-      <div class="mb-12">
-        <h2 class="font-display text-3xl font-bold text-text-primary sm:text-4xl">
-          Get In Touch
-        </h2>
-        <div class="mx-auto mt-4 h-1 w-16 rounded-full bg-accent" />
-      </div>
-
-      <!-- Message -->
-      <p class="mb-10 text-base leading-relaxed text-text-secondary sm:text-lg">
-        I'm always open to new opportunities, interesting projects, and
-        conversations about software engineering. Whether you have a question or
-        just want to say hello — feel free to reach out.
-      </p>
-
-      <!-- Contact details -->
-      <div class="mb-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <a
-          :href="`mailto:${profileData.email}`"
-          class="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-sm font-semibold text-on-accent shadow-glow transition-all duration-300 hover:bg-accent-dim hover:shadow-glow-strong"
-          aria-label="Send me an email"
-        >
-          <Icon name="mdi:email-outline" />
-          {{ profileData.email }}
-        </a>
-        <a
-          :href="`tel:${profileData.phone.replace(/\\s/g, '')}`"
-          class="inline-flex items-center gap-2 rounded-full border border-border/10 px-8 py-3.5 text-sm font-semibold text-text-primary transition-all duration-300 hover:border-accent/50 hover:bg-accent/5"
-          aria-label="Call me"
-        >
-          <Icon name="mdi:phone-outline" />
-          {{ profileData.phone }}
-        </a>
-      </div>
-
-      <!-- Location -->
-      <p class="mb-6 flex items-center justify-center gap-2 text-sm text-text-muted">
-        <Icon name="mdi:map-marker-outline" class="text-accent" />
-        {{ profileData.location }}
-      </p>
-
-      <!-- Social links -->
-      <div class="flex justify-center">
-        <SocialLinks size="lg" />
+  <section id="contact" class="relative overflow-hidden px-4 py-32 sm:px-6 md:py-48">
+    <div class="pointer-events-none absolute bottom-0 right-0 h-[36rem] w-[36rem] rounded-full bg-accent/10 blur-[150px]" />
+    <div class="relative mx-auto max-w-7xl">
+      <p class="text-xs font-semibold uppercase tracking-[0.22em] text-accent">Let’s build something that matters</p>
+      <h2 class="mt-8 max-w-6xl font-display text-[clamp(3.5rem,8vw,9rem)] font-semibold leading-[.88] tracking-[-0.07em] text-text-primary">Have a hard problem worth solving?</h2>
+      <div class="mt-14 grid gap-10 border-t border-border/10 pt-10 md:grid-cols-2 md:items-end">
+        <p class="max-w-xl text-lg leading-relaxed text-text-secondary">I’m open to ambitious product work, engineering leadership conversations, and collaborations where the technical details matter as much as the user experience.</p>
+        <div class="flex flex-col gap-3 md:items-end">
+          <a :href="`mailto:${profileData.email}`" class="group flex w-full max-w-md items-center justify-between rounded-full bg-accent px-6 py-4 font-semibold text-void transition-transform duration-300 hover:-translate-y-1">
+            {{ profileData.email }}
+            <Icon name="mdi:arrow-top-right" class="text-xl transition-transform group-hover:rotate-12" />
+          </a>
+          <a :href="`tel:${profileData.phone.replace(/\s/g, '')}`" class="flex w-full max-w-md items-center justify-between rounded-full border border-border/15 px-6 py-4 font-semibold text-text-primary transition-colors hover:border-text-primary/50">
+            {{ profileData.phone }}
+            <Icon name="mdi:phone-outline" />
+          </a>
+        </div>
       </div>
     </div>
   </section>
