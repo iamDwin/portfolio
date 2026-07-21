@@ -47,10 +47,10 @@ watch(
         <Transition name="panel">
           <div
             v-if="open"
-            class="relative z-10 w-full sm:max-w-2xl max-h-[92vh] sm:max-h-[88vh] overflow-y-auto rounded-t-3xl sm:rounded-2xl bg-card border border-border/10 shadow-2xl"
+            class="relative z-10 w-full sm:max-w-2xl max-h-[92vh] sm:max-h-[88vh] overflow-y-auto rounded-t-2xl sm:rounded-2xl bg-card border border-border/70 shadow-2xl"
           >
             <!-- Image -->
-            <div class="relative aspect-video overflow-hidden rounded-t-3xl sm:rounded-t-2xl bg-elevated shrink-0">
+            <div class="relative aspect-video overflow-hidden rounded-t-2xl bg-elevated shrink-0">
               <img
                 :src="project.image"
                 :alt="project.title"

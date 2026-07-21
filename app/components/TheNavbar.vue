@@ -32,7 +32,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         aria-label="Scroll to top"
         @click="handleNavClick('hero')"
       >
-        <span class="flex h-9 w-9 items-center justify-center rounded-full bg-accent text-sm font-bold text-void transition-transform duration-500 group-hover:rotate-12">GE</span>
+        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-sm font-bold text-on-accent transition-transform duration-500 group-hover:rotate-6">GE</span>
         <span class="hidden font-display text-sm font-semibold tracking-tight text-text-primary sm:block">Goodman Effah</span>
       </button>
 
@@ -51,7 +51,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
       <div class="flex items-center gap-2">
         <a
           href="mailto:goodmaneffah@gmail.com"
-          class="hidden items-center gap-2 rounded-full border border-accent/30 px-4 py-2 text-xs font-semibold text-accent transition-colors hover:bg-accent hover:text-void sm:flex"
+          class="hidden items-center gap-2 rounded-lg border border-accent/40 px-4 py-2 font-mono text-[10px] font-semibold uppercase tracking-[0.08em] text-accent transition-colors hover:bg-accent hover:text-on-accent sm:flex"
         >
           Available for select work
         </a>

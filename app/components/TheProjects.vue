@@ -18,16 +18,10 @@ onMounted(async () => {
   gsap.registerPlugin(ScrollTrigger)
   gsapContext = gsap.context(() => {
     gsap.utils.toArray<HTMLElement>('[data-project-image]').forEach((image) => {
-      gsap.fromTo(image, { scale: 0.84, opacity: 0.45 }, {
+      gsap.fromTo(image, { scale: 0.94 }, {
         scale: 1,
-        opacity: 1,
         ease: 'none',
         scrollTrigger: { trigger: image, start: 'top 92%', end: 'center 58%', scrub: 0.7 },
-      })
-      gsap.to(image, {
-        opacity: 0.28,
-        ease: 'none',
-        scrollTrigger: { trigger: image, start: 'bottom 38%', end: 'bottom top', scrub: 0.7 },
       })
     })
   }, sectionRef.value)
@@ -37,10 +31,10 @@ onUnmounted(() => gsapContext?.revert())
 </script>
 
 <template>
-  <section id="projects" ref="sectionRef" class="px-4 py-32 sm:px-6 md:py-48">
+  <section id="projects" ref="sectionRef" class="px-4 py-24 sm:px-6 md:py-28">
     <div class="mx-auto max-w-7xl">
       <div class="mb-16 flex flex-col justify-between gap-8 md:mb-24 md:flex-row md:items-end">
-        <h2 class="max-w-4xl font-display text-[clamp(3rem,6vw,6.5rem)] font-semibold leading-[.92] tracking-[-0.06em] text-text-primary">Selected work with measurable weight.</h2>
+        <h2 class="max-w-4xl font-display text-[clamp(3rem,5vw,4rem)] font-medium leading-[1.04] tracking-[-0.045em] text-text-primary">Selected work with measurable weight.</h2>
         <p class="max-w-sm text-base leading-relaxed text-text-secondary">A focused selection spanning product analytics, native mobile, and operational software.</p>
       </div>
 
@@ -48,7 +42,7 @@ onUnmounted(() => gsapContext?.revert())
         <article
           v-for="(project, index) in featuredProjects"
           :key="project.title"
-          class="group relative min-h-[28rem] cursor-pointer overflow-hidden rounded-[1.75rem] bg-surface min-[960px]:min-h-0"
+          class="group relative min-h-[28rem] cursor-pointer overflow-hidden rounded-2xl bg-surface min-[960px]:min-h-0"
           :class="index === 0 ? 'min-[960px]:col-span-7 min-[960px]:row-span-2 min-[960px]:min-h-[48rem]' : 'min-[960px]:col-span-5 min-[960px]:row-span-1'"
           tabindex="0"
           :aria-label="`Open project details for ${project.title}`"
@@ -56,21 +50,24 @@ onUnmounted(() => gsapContext?.revert())
           @keydown.enter="selectedProject = project"
         >
           <img data-project-image :src="project.image" :alt="project.title" class="absolute inset-0 h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-105">
-          <div class="absolute inset-0 bg-gradient-to-t from-void via-void/25 to-transparent" />
+          <div class="absolute inset-0 bg-gradient-to-t from-[#111827]/95 via-[#111827]/20 to-transparent" />
           <div class="absolute inset-x-0 bottom-0 p-6 sm:p-8">
             <div class="flex items-end justify-between gap-6">
               <div>
-                <p class="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-accent">{{ project.category === 'work' ? 'Product engineering' : 'Independent product' }}</p>
+                <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/95 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-[#111827] shadow-[0_8px_24px_rgba(17,24,39,0.28)] backdrop-blur-sm">
+                  <span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+                  {{ project.category === 'work' ? 'Product engineering' : 'Independent product' }}
+                </p>
                 <h3 class="max-w-xl font-display text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">{{ project.title }}</h3>
                 <p class="mt-3 max-w-xl text-sm leading-relaxed text-white/70 line-clamp-2">{{ project.description }}</p>
               </div>
-              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white text-lg text-void transition-transform duration-300 group-hover:rotate-12"><Icon name="mdi:arrow-top-right" /></span>
+              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-white text-lg text-[#111827] transition-transform duration-300 group-hover:rotate-6"><Icon name="mdi:arrow-top-right" /></span>
             </div>
           </div>
         </article>
       </div>
 
-      <div class="mt-28 md:mt-40">
+      <div class="mt-24 md:mt-28">
         <div class="mb-10 flex items-end justify-between gap-6 border-b border-border/10 pb-6">
           <div>
             <h3 class="font-display text-3xl font-semibold tracking-[-0.04em] text-text-primary sm:text-4xl">More from the archive</h3>

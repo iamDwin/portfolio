@@ -3,50 +3,50 @@
 html.dark {
   color-scheme: dark;
 
-  --color-void: 10 12 11;
-  --color-primary: 14 17 15;
-  --color-surface: 19 23 20;
-  --color-card: 24 29 25;
-  --color-elevated: 31 37 32;
+  --color-void: 17 24 39;
+  --color-primary: 22 31 49;
+  --color-surface: 83 97 122;
+  --color-card: 31 42 59;
+  --color-elevated: 51 63 83;
 
-  --color-accent: 184 245 79;
-  --color-accent-dim: 153 214 54;
-  --color-accent-light: 210 255 135;
+  --color-accent: 228 139 89;
+  --color-accent-dim: 201 111 64;
+  --color-accent-light: 237 123 70;
 
-  --color-text-primary: 242 244 238;
-  --color-text-secondary: 177 184 174;
-  --color-text-muted: 112 122 112;
+  --color-text-primary: 248 250 252;
+  --color-text-secondary: 203 213 225;
+  --color-text-muted: 148 163 184;
 
   --color-overlay: 255 255 255;
-  --color-border: 255 255 255;
-  --color-on-accent: 255 255 255;
+  --color-border: 100 116 139;
+  --color-on-accent: 17 24 39;
 
-  --color-accent-glow: 184 245 79;
+  --color-accent-glow: 228 139 89;
 }
 
 /* ===== LIGHT THEME ===== */
 html.light {
   color-scheme: light;
 
-  --color-void: 250 250 252;
-  --color-primary: 244 244 248;
-  --color-surface: 238 238 244;
+  --color-void: 255 255 255;
+  --color-primary: 247 248 250;
+  --color-surface: 83 97 122;
   --color-card: 255 255 255;
-  --color-elevated: 244 244 248;
+  --color-elevated: 236 238 242;
 
-  --color-accent: 68 105 20;
-  --color-accent-dim: 51 84 10;
-  --color-accent-light: 90 136 28;
+  --color-accent: 228 139 89;
+  --color-accent-dim: 201 101 55;
+  --color-accent-light: 237 123 70;
 
-  --color-text-primary: 24 24 32;
-  --color-text-secondary: 88 88 104;
-  --color-text-muted: 140 140 156;
+  --color-text-primary: 17 24 39;
+  --color-text-secondary: 75 85 99;
+  --color-text-muted: 107 114 128;
 
   --color-overlay: 0 0 0;
-  --color-border: 0 0 0;
-  --color-on-accent: 255 255 255;
+  --color-border: 216 218 223;
+  --color-on-accent: 17 24 39;
 
-  --color-accent-glow: 33 135 58;
+  --color-accent-glow: 228 139 89;
 }
 
 /* ===== BASE STYLES ===== */
@@ -58,16 +58,46 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Satoshi', 'Manrope', system-ui, -apple-system, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
   background: rgb(var(--color-void));
 }
 
+body::before {
+  position: fixed;
+  z-index: 40;
+  inset: 0;
+  pointer-events: none;
+  content: '';
+  opacity: 0.025;
+  background-image: repeating-radial-gradient(circle at 20% 30%, rgb(var(--color-overlay)) 0 0.5px, transparent 0.8px 3px);
+  background-size: 5px 5px;
+}
+
 ::selection {
-  color: rgb(var(--color-void));
+  color: rgb(17 24 39);
   background: rgb(var(--color-accent));
+}
+
+:where(a, button, [tabindex]):focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 4px;
+}
+
+:where(a, button):active {
+  transform: translateY(1px) scale(0.99);
+}
+
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
 }
 
 @media (prefers-reduced-motion: reduce) {

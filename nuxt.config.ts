@@ -48,7 +48,7 @@ export default defineNuxtConfig({
             'Godwin Goodman Effah, Software Engineer, Frontend Developer, Angular, Vue.js, React, TypeScript, Ionic, Nuxt, Ghana, Accra, web developer, mobile developer',
         },
         { name: 'robots', content: 'index, follow' },
-        { name: 'theme-color', content: '#2D9D4A' },
+        { name: 'theme-color', content: '#E48B59' },
         // Open Graph
         {
           property: 'og:title',
@@ -84,7 +84,7 @@ export default defineNuxtConfig({
         },
         {
           rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap',
+          href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500;600&display=swap',
         },
       ],
     },

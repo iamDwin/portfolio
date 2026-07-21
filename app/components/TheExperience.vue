@@ -34,11 +34,11 @@ onUnmounted(() => gsapContext?.revert())
 </script>
 
 <template>
-  <section id="experience" ref="sectionRef" class="relative bg-surface px-4 py-32 sm:px-6 md:py-48">
+  <section id="experience" ref="sectionRef" class="relative bg-primary px-4 py-24 sm:px-6 md:py-28">
     <div class="mx-auto grid max-w-7xl gap-14 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
       <div class="lg:sticky lg:top-32 lg:h-fit">
-        <p class="text-xs font-semibold uppercase tracking-[0.22em] text-accent">Experience</p>
-        <h2 class="mt-6 max-w-xl font-display text-[clamp(3rem,5.5vw,6rem)] font-semibold leading-[.94] tracking-[-0.06em] text-text-primary">Built in the work, shaped by responsibility.</h2>
+        <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent">Experience</p>
+        <h2 class="mt-6 max-w-xl font-display text-[clamp(3rem,5vw,4rem)] font-medium leading-[1.04] tracking-[-0.045em] text-text-primary">Built in the work, shaped by responsibility.</h2>
         <p class="mt-8 max-w-md text-base leading-relaxed text-text-secondary">From frontend delivery to technical leadership, my path has expanded through increasingly complex products, teams, and operational constraints.</p>
       </div>
 
@@ -47,7 +47,7 @@ onUnmounted(() => gsapContext?.revert())
           v-for="(entry, index) in experience"
           :key="entry.company + entry.period"
           data-experience-card
-          class="sticky overflow-hidden rounded-[1.75rem] border border-border/10 bg-primary p-7 shadow-2xl sm:p-10"
+          class="sticky overflow-hidden rounded-2xl border border-border/70 bg-card p-7 shadow-glow sm:p-10"
           :style="{ top: `${112 + Math.min(index, 3) * 12}px`, zIndex: index + 1 }"
         >
           <div class="flex flex-col justify-between gap-5 border-b border-border/10 pb-7 sm:flex-row sm:items-start">

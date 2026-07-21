@@ -26,11 +26,11 @@ const changePrinciple = (direction: number) => {
 </script>
 
 <template>
-  <section id="about" class="relative px-4 py-32 sm:px-6 md:py-48">
+  <section id="about" class="relative px-4 py-24 sm:px-6 md:py-28">
     <div class="mx-auto max-w-7xl">
       <div class="grid gap-12 lg:grid-cols-[.72fr_1.28fr] lg:gap-20">
         <div>
-          <p class="text-xs font-semibold uppercase tracking-[0.22em] text-accent">Engineering, end to end</p>
+          <p class="font-mono text-xs font-semibold uppercase tracking-[0.18em] text-accent">Engineering, end to end</p>
           <p class="mt-6 max-w-sm text-base leading-relaxed text-text-secondary">{{ profileData.bio[1] }}</p>
           <div class="mt-8 flex items-center gap-3 text-sm text-text-muted">
             <Icon name="mdi:map-marker-outline" class="text-lg text-accent" />
@@ -39,10 +39,10 @@ const changePrinciple = (direction: number) => {
         </div>
 
         <div>
-          <h2 class="font-display text-[clamp(2.75rem,5.2vw,5.7rem)] font-semibold leading-[1.02] tracking-[-0.055em] text-text-primary">
+          <h2 class="font-display text-[clamp(2.75rem,5.2vw,4rem)] font-medium leading-[1.04] tracking-[-0.045em] text-text-primary">
             I connect product thinking
             <span class="mx-2 inline-block h-[.72em] w-[1.45em] overflow-hidden rounded-full align-baseline">
-              <img src="https://picsum.photos/seed/green-interface/360/180" alt="" class="h-full w-full object-cover grayscale contrast-125">
+              <img src="/images/godwin-systems-planning-bearded.webp" alt="" class="h-full w-full object-cover object-center">
             </span>
             with hands-on engineering.
           </h2>
@@ -50,13 +50,13 @@ const changePrinciple = (direction: number) => {
         </div>
       </div>
 
-      <div class="mt-24 overflow-hidden rounded-[2rem] border border-border/10 bg-surface md:mt-36">
-        <div class="grid md:grid-cols-[.82fr_1.18fr]">
-          <div class="relative min-h-72 overflow-hidden md:min-h-[28rem]">
-            <img src="https://picsum.photos/seed/code-structure/1000/1100" alt="Abstract structural detail" class="h-full w-full object-cover grayscale contrast-125 transition-transform duration-700 hover:scale-105">
-            <div class="absolute inset-0 bg-gradient-to-t from-void/70 to-transparent" />
+      <div class="mt-20 overflow-hidden rounded-2xl border border-border/70 bg-card shadow-glow md:mt-24">
+        <div class="grid md:h-[32rem] md:grid-cols-[.82fr_1.18fr] lg:h-[34rem]">
+          <div class="relative h-80 overflow-hidden md:h-full">
+            <img src="/images/godwin-workspace-portrait-bearded-right-handed.webp" alt="Godwin Goodman Effah working through a product system" class="h-full w-full object-cover object-[center_46%] transition-transform duration-700 hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#111827]/70 to-transparent" />
           </div>
-          <div class="flex min-h-[28rem] flex-col justify-between p-7 sm:p-10 lg:p-14">
+          <div class="flex min-h-[26rem] flex-col justify-between p-7 sm:p-10 md:h-full md:min-h-0 lg:p-14">
             <Transition name="principle" mode="out-in">
               <div :key="activePrinciple">
                 <p class="text-sm font-semibold text-accent">How I work</p>
@@ -67,8 +67,8 @@ const changePrinciple = (direction: number) => {
             <div class="mt-12 flex items-center justify-between">
               <span class="text-xs font-semibold tracking-[0.2em] text-text-muted">0{{ activePrinciple + 1 }} / 0{{ principles.length }}</span>
               <div class="flex gap-2">
-                <button class="flex h-11 w-11 items-center justify-center rounded-full border border-border/15 text-text-primary transition-colors hover:border-accent hover:text-accent" aria-label="Previous principle" @click="changePrinciple(-1)"><Icon name="mdi:arrow-left" /></button>
-                <button class="flex h-11 w-11 items-center justify-center rounded-full bg-accent text-void transition-transform hover:translate-x-1" aria-label="Next principle" @click="changePrinciple(1)"><Icon name="mdi:arrow-right" /></button>
+                <button class="flex h-11 w-11 items-center justify-center rounded-lg border border-border/70 text-text-primary transition-colors hover:border-accent hover:text-accent" aria-label="Previous principle" @click="changePrinciple(-1)"><Icon name="mdi:arrow-left" /></button>
+                <button class="flex h-11 w-11 items-center justify-center rounded-lg bg-accent text-on-accent transition-transform hover:translate-x-1" aria-label="Next principle" @click="changePrinciple(1)"><Icon name="mdi:arrow-right" /></button>
               </div>
             </div>
           </div>
