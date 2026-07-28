@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Harvest Lines game board</title>
+  <desc id="desc">A warm illustrated crop-matching puzzle board with carrots, tomatoes, corn, and blueberries.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8d58b"/>
+      <stop offset="0.55" stop-color="#e6a664"/>
+      <stop offset="1" stop-color="#b86f4c"/>
+    </linearGradient>
+    <linearGradient id="soil" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#80543b"/>
+      <stop offset="1" stop-color="#4e3329"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="10" flood-color="#34251f" flood-opacity=".25"/>
+    </filter>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#sky)"/>
+  <circle cx="1330" cy="160" r="76" fill="#fff4c7" opacity=".85"/>
+  <path d="M0 330C240 260 380 365 590 315s390-80 590-8 300 40 420 8V0H0Z" fill="#f5e2b5" opacity=".36"/>
+  <path d="M0 360h1600v640H0z" fill="url(#soil)"/>
+  <g opacity=".2" stroke="#f6d8a7" stroke-width="4">
+    <path d="M0 480h1600M0 620h1600M0 760h1600M0 900h1600"/>
+    <path d="M200 360v640M400 360v640M600 360v640M800 360v640M1000 360v640M1200 360v640M1400 360v640"/>
+  </g>
+  <g transform="translate(310 420)" filter="url(#shadow)">
+    <rect width="980" height="500" rx="54" fill="#f6e5be" stroke="#fff2d2" stroke-width="14"/>
+    <g transform="translate(55 45)">
+      <g fill="#67402f">
+        <rect x="0" y="0" width="120" height="120" rx="26"/><rect x="140" y="0" width="120" height="120" rx="26"/><rect x="280" y="0" width="120" height="120" rx="26"/><rect x="420" y="0" width="120" height="120" rx="26"/><rect x="560" y="0" width="120" height="120" rx="26"/><rect x="700" y="0" width="120" height="120" rx="26"/>
+        <rect x="0" y="140" width="120" height="120" rx="26"/><rect x="140" y="140" width="120" height="120" rx="26"/><rect x="280" y="140" width="120" height="120" rx="26"/><rect x="420" y="140" width="120" height="120" rx="26"/><rect x="560" y="140" width="120" height="120" rx="26"/><rect x="700" y="140" width="120" height="120" rx="26"/>
+        <rect x="0" y="280" width="120" height="120" rx="26"/><rect x="140" y="280" width="120" height="120" rx="26"/><rect x="280" y="280" width="120" height="120" rx="26"/><rect x="420" y="280" width="120" height="120" rx="26"/><rect x="560" y="280" width="120" height="120" rx="26"/><rect x="700" y="280" width="120" height="120" rx="26"/>
+      </g>
+      <g stroke="#f8f1df" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M60 90C22 42 42 10 72 16c16-32 58-18 52 20-6 28-35 55-64 54Z" fill="#e96c38"/><path d="M56 24 36 0M72 18 78-8M86 28l28-24" stroke="#53935b"/>
+        <circle cx="200" cy="60" r="39" fill="#d9493f"/><path d="m174 34 26-20 26 20-10 10-16-6-16 6Z" fill="#53935b" stroke="none"/>
+        <path d="M333 25c33 0 47 22 47 55s-16 47-47 47-47-14-47-47 14-55 47-55Z" fill="#f2c34d"/><path d="M310 43c-27 18-31 58-12 82M356 43c27 18 31 58 12 82" fill="none" stroke="#6aa05c"/>
+        <g fill="#527eaf"><circle cx="480" cy="50" r="24"/><circle cx="513" cy="70" r="26"/><circle cx="470" cy="88" r="23"/></g><path d="m486 35 18-27" stroke="#53935b"/>
+        <circle cx="620" cy="58" r="39" fill="#d9493f"/><path d="m594 32 26-20 26 20-10 10-16-6-16 6Z" fill="#53935b" stroke="none"/>
+        <path d="M760 90c-38-48-18-80 12-74 16-32 58-18 52 20-6 28-35 55-64 54Z" fill="#e96c38"/><path d="M756 24 736 0M772 18l6-26M786 28l28-24" stroke="#53935b"/>
+      </g>
+      <path d="M58 194C190 126 300 310 440 198s242-58 334 140" fill="none" stroke="#fff5dc" stroke-width="16" stroke-linecap="round" stroke-dasharray="4 28"/>
+      <g transform="translate(0 140)" stroke="#f8f1df" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+        <g fill="#527eaf"><circle cx="60" cy="50" r="24"/><circle cx="93" cy="70" r="26"/><circle cx="50" cy="88" r="23"/></g><path d="m66 35 18-27" stroke="#53935b"/>
+        <path d="M193 25c33 0 47 22 47 55s-16 47-47 47-47-14-47-47 14-55 47-55Z" fill="#f2c34d"/><path d="M170 43c-27 18-31 58-12 82M216 43c27 18 31 58 12 82" fill="none" stroke="#6aa05c"/>
+        <circle cx="340" cy="60" r="39" fill="#d9493f"/><path d="m314 34 26-20 26 20-10 10-16-6-16 6Z" fill="#53935b" stroke="none"/>
+        <path d="M480 90c-38-48-18-80 12-74 16-32 58-18 52 20-6 28-35 55-64 54Z" fill="#e96c38"/><path d="M476 24 456 0M492 18l6-26M506 28l28-24" stroke="#53935b"/>
+        <g fill="#527eaf"><circle cx="620" cy="50" r="24"/><circle cx="653" cy="70" r="26"/><circle cx="610" cy="88" r="23"/></g><path d="m626 35 18-27" stroke="#53935b"/>
+        <path d="M753 25c33 0 47 22 47 55s-16 47-47 47-47-14-47-47 14-55 47-55Z" fill="#f2c34d"/><path d="M730 43c-27 18-31 58-12 82M776 43c27 18 31 58 12 82" fill="none" stroke="#6aa05c"/>
+      </g>
+      <g transform="translate(0 280)" stroke="#f8f1df" stroke-width="10" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="60" cy="60" r="39" fill="#d9493f"/><path d="m34 34 26-20 26 20-10 10-16-6-16 6Z" fill="#53935b" stroke="none"/>
+        <path d="M200 90c-38-48-18-80 12-74 16-32 58-18 52 20-6 28-35 55-64 54Z" fill="#e96c38"/><path d="M196 24 176 0M212 18l6-26M226 28l28-24" stroke="#53935b"/>
+        <g fill="#527eaf"><circle cx="340" cy="50" r="24"/><circle cx="373" cy="70" r="26"/><circle cx="330" cy="88" r="23"/></g><path d="m346 35 18-27" stroke="#53935b"/>
+        <path d="M473 25c33 0 47 22 47 55s-16 47-47 47-47-14-47-47 14-55 47-55Z" fill="#f2c34d"/><path d="M450 43c-27 18-31 58-12 82M496 43c27 18 31 58 12 82" fill="none" stroke="#6aa05c"/>
+        <circle cx="620" cy="60" r="39" fill="#d9493f"/><path d="m594 34 26-20 26 20-10 10-16-6-16 6Z" fill="#53935b" stroke="none"/>
+        <g fill="#527eaf"><circle cx="760" cy="50" r="24"/><circle cx="793" cy="70" r="26"/><circle cx="750" cy="88" r="23"/></g><path d="m766 35 18-27" stroke="#53935b"/>
+      </g>
+    </g>
+  </g>
+  <text x="106" y="144" fill="#40312a" font-family="ui-rounded, system-ui, sans-serif" font-size="86" font-weight="800" letter-spacing="-3">HARVEST LINES</text>
+  <text x="112" y="207" fill="#654a3c" font-family="system-ui, sans-serif" font-size="29" font-weight="650" letter-spacing="5">CONNECT · GROW · HARVEST</text>
+</svg>

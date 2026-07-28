@@ -32,7 +32,7 @@ onUnmounted(() => window.removeEventListener('scroll', handleScroll))
         aria-label="Scroll to top"
         @click="handleNavClick('hero')"
       >
-        <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-sm font-bold text-on-accent transition-transform duration-500 group-hover:rotate-6">GE</span>
+        <img src="/logo-mark.svg" alt="" class="h-9 w-9 transition-transform duration-500 group-hover:rotate-6">
         <span class="hidden font-display text-sm font-semibold tracking-tight text-text-primary sm:block">Goodman Effah</span>
       </button>
 

@@ -7,7 +7,7 @@ const selectedProject = ref<Project | null>(null)
 const showArchive = ref(false)
 let gsapContext: { revert: () => void } | null = null
 
-const featuredProjects = [projects[1], projects[0], projects[7]].filter(Boolean) as Project[]
+const featuredProjects = projects.filter((project) => project.status === 'active').slice(0, 3)
 const archiveProjects = computed(() => projects.filter((project) => !featuredProjects.includes(project)))
 const visibleArchive = computed(() => showArchive.value ? archiveProjects.value : archiveProjects.value.slice(0, 3))
 
@@ -34,8 +34,8 @@ onUnmounted(() => gsapContext?.revert())
   <section id="projects" ref="sectionRef" class="px-4 py-24 sm:px-6 md:py-28">
     <div class="mx-auto max-w-7xl">
       <div class="mb-16 flex flex-col justify-between gap-8 md:mb-24 md:flex-row md:items-end">
-        <h2 class="max-w-4xl font-display text-[clamp(3rem,5vw,4rem)] font-medium leading-[1.04] tracking-[-0.045em] text-text-primary">Selected work with measurable weight.</h2>
-        <p class="max-w-sm text-base leading-relaxed text-text-secondary">A focused selection spanning product analytics, native mobile, and operational software.</p>
+        <h2 class="max-w-4xl font-display text-[clamp(3rem,5vw,4rem)] font-medium leading-[1.04] tracking-[-0.045em] text-text-primary">Products I’m actively building.</h2>
+        <p class="max-w-sm text-base leading-relaxed text-text-secondary">Independent work spanning vehicle intelligence, live production, native macOS tooling, and mobile games.</p>
       </div>
 
       <div class="grid grid-flow-dense gap-4 min-[960px]:grid-cols-12 min-[960px]:grid-rows-2">
@@ -56,7 +56,7 @@ onUnmounted(() => gsapContext?.revert())
               <div>
                 <p class="mb-4 inline-flex items-center gap-2 rounded-full border border-white/80 bg-white/95 px-3 py-1.5 text-[0.65rem] font-bold uppercase tracking-[0.16em] text-[#111827] shadow-[0_8px_24px_rgba(17,24,39,0.28)] backdrop-blur-sm">
                   <span class="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
-                  {{ project.category === 'work' ? 'Product engineering' : 'Independent product' }}
+                  {{ project.status === 'active' ? 'Actively building' : project.category === 'work' ? 'Product engineering' : 'Independent product' }}
                 </p>
                 <h3 class="max-w-xl font-display text-3xl font-semibold tracking-[-0.04em] text-white sm:text-4xl">{{ project.title }}</h3>
                 <p class="mt-3 max-w-xl text-sm leading-relaxed text-white/70 line-clamp-2">{{ project.description }}</p>
@@ -70,8 +70,8 @@ onUnmounted(() => gsapContext?.revert())
       <div class="mt-24 md:mt-28">
         <div class="mb-10 flex items-end justify-between gap-6 border-b border-border/10 pb-6">
           <div>
-            <h3 class="font-display text-3xl font-semibold tracking-[-0.04em] text-text-primary sm:text-4xl">More from the archive</h3>
-            <p class="mt-3 text-sm text-text-secondary">Internal tools, AI systems, client work, and earlier product builds.</p>
+            <h3 class="font-display text-3xl font-semibold tracking-[-0.04em] text-text-primary sm:text-4xl">Selected work and experiments</h3>
+            <p class="mt-3 text-sm text-text-secondary">The fourth active build, shipped products, internal tools, AI systems, and earlier work.</p>
           </div>
           <span class="hidden text-sm font-semibold text-text-muted sm:block">{{ archiveProjects.length }} projects</span>
         </div>

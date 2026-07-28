@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64" role="img" aria-labelledby="title desc">
+  <title id="title">Goodman Effah monogram</title>
+  <desc id="desc">A geometric G and E drawn as connected engineering paths</desc>
+  <rect x="1" y="1" width="62" height="62" rx="16" fill="#111827" stroke="#E48B59" stroke-width="2"/>
+  <path d="M29 18h-7C14.268 18 8 24.268 8 32s6.268 14 14 14h7V34h-8" fill="none" stroke="#F7F5F1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M38 18v28M38 18h16M38 32h13M38 46h16" fill="none" stroke="#F7F5F1" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="29" cy="18" r="3.25" fill="#E48B59"/>
+  <circle cx="54" cy="46" r="3.25" fill="#E48B59"/>
+</svg>

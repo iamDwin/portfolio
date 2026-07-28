@@ -6,10 +6,52 @@ export interface Project {
   liveUrl?: string
   githubUrl?: string
   featured: boolean
+  status?: 'active'
   category: 'work' | 'personal' | 'freelance'
 }
 
 export const projects: Project[] = [
+  {
+    title: 'TrustRyde',
+    description:
+      'An evidence-led, mobile-first vehicle due-diligence platform for used-car buyers. TrustRyde guides identity checks, VIN capture, inspection evidence, diagnostics, and explainable purchase-risk reporting so buyers can know before they own—even with unreliable connectivity.',
+    image: '/images/projects/trustryde.png',
+    tags: ['Expo', 'React Native', 'TypeScript', 'SQLite', 'On-device OCR', 'Offline-first'],
+    featured: true,
+    status: 'active',
+    category: 'personal',
+  },
+  {
+    title: 'LiveCue',
+    description:
+      'A professional, local-first run-of-show timer for live events and broadcasts. Operators control synchronized Presenter and Agenda displays in real time, share them over a venue LAN, and protect active productions with deliberate live-mode safeguards.',
+    image: '/images/projects/livecue.png',
+    tags: ['Next.js', 'Socket.io', 'Electron', 'Prisma', 'SQLite', 'TypeScript'],
+    githubUrl: 'https://github.com/iamDwin/livecue',
+    featured: true,
+    status: 'active',
+    category: 'personal',
+  },
+  {
+    title: 'SiftMyMac',
+    description:
+      'A native macOS disk-cleanup utility for developers. It scans build artifacts, package-manager caches, application caches, and simulator runtimes, then provides a review-first workflow with recovery safeguards before anything is removed.',
+    image: '/images/projects/siftmymac.png',
+    tags: ['SwiftUI', 'macOS', 'Swift', 'Sparkle', 'Menu Bar', 'File Safety'],
+    featured: true,
+    status: 'active',
+    category: 'personal',
+  },
+  {
+    title: 'Harvest Lines',
+    description:
+      'A cozy native crop-matching puzzle game built around drawing paths through adjacent crops, fulfilling market orders, and planning around a field that grows, ripens, and spoils after each harvest. The deterministic engine supports tutorials, replay, accessibility, and balance simulation.',
+    image: '/images/projects/harvest-lines.svg',
+    tags: ['Expo', 'React Native', 'Skia', 'TypeScript', 'SQLite', 'Vitest'],
+    featured: true,
+    status: 'active',
+    category: 'personal',
+  },
   {
     title: 'SpendQueue',
     description:

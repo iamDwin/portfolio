@@ -77,10 +77,10 @@ watch(
                   {{ project.title }}
                 </h2>
                 <span
-                  v-if="project.featured"
+                  v-if="project.status === 'active' || project.featured"
                   class="shrink-0 mt-1 rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-semibold text-accent border border-accent/20"
                 >
-                  Featured
+                  {{ project.status === 'active' ? 'Actively building' : 'Featured' }}
                 </span>
               </div>
 

@@ -26,7 +26,7 @@ export const profileData: ProfileData = {
   bio: [
     'I\'m a Software Engineer based in Accra, Ghana with experience spanning frontend development, mobile applications, and backend services. I specialize in Angular, Vue.js, React, React Native, SwiftUI, and TypeScript — building interfaces that are performant, scalable, and user-friendly.',
     'Currently at Heatmap.com, I collaborate with a team of 30+ developers building data analytics tools with Nuxt.js, lead sub-teams on Chrome extensions and survey features, and implement AI-powered solutions that optimize client experiences.',
-    'I enjoy solving complex problems, leading engineering teams, and turning product ideas into production-ready applications — from web platforms and mobile apps to Chrome extensions and business automation tools.',
+    'Outside of Heatmap, I\'m actively building TrustRyde, LiveCue, SiftMyMac, and Harvest Lines — independent products spanning vehicle due diligence, live-production operations, native macOS tooling, and mobile games.',
   ],
   email: 'goodmaneffah@gmail.com',
   phone: '+233 54 152 4233',

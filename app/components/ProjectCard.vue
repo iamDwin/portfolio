@@ -21,7 +21,7 @@ const emit = defineEmits<{ open: [project: Project] }>()
       </a>
     </div>
     <div class="p-6">
-      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{{ project.category }}</p>
+      <p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">{{ project.status === 'active' ? 'Actively building' : project.category }}</p>
       <h3 class="mt-3 font-display text-xl font-semibold tracking-[-0.03em] text-text-primary transition-colors group-hover:text-accent">{{ project.title }}</h3>
       <p class="mt-3 text-sm leading-relaxed text-text-secondary line-clamp-3">{{ project.description }}</p>
       <p class="mt-6 text-xs leading-6 text-text-muted">{{ project.tags.slice(0, 5).join(' · ') }}</p>
